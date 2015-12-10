@@ -11,12 +11,14 @@ body{
 }
 
 header{
+  @include span-columns(12);
   height: 70px;
   padding: 12px 0 0 0;
 
 
   #logo {
-    margin: 40px 0 0 40px;
+    @include span-columns(4);
+    @include shift(.5);
     font-weight: lighter;
     letter-spacing: .5px;
     text-decoration: none;
@@ -33,29 +35,80 @@ header{
       font-size: 36px;
     }
   }
-}
 
-#homepage{
-  @include span-columns(12) ;
+  #headerNav{
+    @include span-columns(3);
+    @include shift(4.5);
+    margin-top: 8px;
 
-  #homeNav {
-    background-color: #E1E3E4;
-    height: 30px;
-    padding: 7px 0 0 0;
-
-    span{
-      @include shift(.2);
+    input{
+      @include span-columns(8);
+      height: 25px;
+      font-size: 15px;
+      font-weight: lighter;
     }
 
     a{
-      @include shift(8.4);
+      @include span-columns(1);
+      @include shift(.7);
       text-decoration: none;
       color: #000;
-      margin-right: 15px;
+      height: 25px;
+      padding-top: 5px;
+      font-weight: lighter;
 
       &:hover{
         color: #5D76D4;
       }
+    }
+  }
+}
+
+#splashpage{
+  @include span-columns(12) ;
+
+  #homeNav {
+    background-color: #F3F3F3;
+    height: 30px;
+    padding: 7px 0 0 0;
+
+    span{
+      @include shift(.5);
+      @include span-columns(4);
+      font-weight: lighter;
+    }
+
+    a{
+      @include shift(6.5);
+      text-decoration: none;
+      color: #000;
+      margin-right: 15px;
+      font-weight: lighter;
+
+      &:hover{
+        color: #5D76D4;
+        }
       }
     }
+  }
+
+  #hero{
+    @include span-columns(12);
+    background: gray url("../../assets/goalHero.jpg") no-repeat fixed center;
+    height: 600px;
+
+      #signupBtn{
+        @include span-columns(1.5);
+        @include shift(2.2);
+        margin-top: 20%;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        background: #F7263C;
+
+      }
+  }
+
+  #goalsInfo{
+    height: 500px;
   }

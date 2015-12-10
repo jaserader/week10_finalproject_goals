@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute } from 'react-router';
 
-import Homepage from "./homepage";
+import Splashpage from "./splashpage";
 import Header from "./header";
 
 class App extends React.Component{
@@ -20,7 +20,7 @@ class App extends React.Component{
 ReactDOM.render((
   <Router>
     <Route path="/" component={App} >
-      <IndexRoute component={Homepage} />
+      <IndexRoute component={Splashpage} />
     </Route>
   </Router>
 ), document.getElementById('app'));
