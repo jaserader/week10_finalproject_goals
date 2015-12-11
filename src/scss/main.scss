@@ -104,7 +104,7 @@ header{
     position: relative;
     color: #fff;
     font-weight: lighter;
-    font-family: 'Titillium Web', sans-serif;
+
 
       #signupBtn{
         @include span-columns(1.4);
@@ -135,7 +135,7 @@ header{
       #textBottom{
         @include span-columns(5);
         @include shift(6.3);
-        font-size: 33px;
+        font-size: 38px;
         margin-top: 15px;
       }
   }
@@ -173,7 +173,7 @@ header{
 
 footer{
   @include span-columns(12);
-  height: 300px;
+  height: 250px;
   background: #A0A0A0;
   margin-top: 50px;
 
@@ -202,7 +202,7 @@ footer{
 
   #socialNav{
     @include span-columns(2);
-    @include shift(5.5);
+    @include shift(5);
     margin-top: 30px;
 
     a{
@@ -219,5 +219,70 @@ footer{
         }
       }
     }
+  }
+
+  #footerNav1{
+    @include span-columns(12);
+    margin-top: 20px;
+      a{
+        @include span-columns(2);
+        text-decoration: none;
+        color: #fff;
+        font-weight: lighter;
+        font-size: 20px;
+
+        &:first-of-type{
+          @include shift(4);
+        }
+      }
+  }
+
+  #footerNav2{
+    @include span-columns(12);
+    margin-top: 5px;
+      a{
+        @include span-columns(2);
+        text-decoration: none;
+        color: #fff;
+        font-weight: lighter;
+        font-size: 20px;
+
+        &:first-of-type{
+          @include shift(4);
+        }
+      }
+  }
+
+  #footerNav3{
+    @include span-columns(12);
+    margin-top: 5px;
+      a{
+        @include span-columns(2);
+        text-decoration: none;
+        color: #fff;
+        font-weight: lighter;
+        font-size: 20px;
+
+        &:first-of-type{
+          @include shift(4);
+        }
+      }
+  }
+
+  #footerNav4{
+    @include span-columns(12);
+    margin-top: 5px;
+
+      a{
+        @include span-columns(2);
+        text-decoration: none;
+        color: #fff;
+        font-weight: lighter;
+        font-size: 20px;
+
+        &:first-of-type{
+          @include shift(4);
+        }
+      }
   }
 }
