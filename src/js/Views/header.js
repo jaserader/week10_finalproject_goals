@@ -8,7 +8,7 @@ class Header extends React.Component{
         <Link id="logo" to="home"><i className="fa fa-list-ul"></i><span>GOALS</span></Link>
         <nav id="headerNav">
           <input type="text" placeholder="search"></input>
-          <a href="">logout</a>
+          <Link to="">logout</Link>
         </nav>
       </header>
     )

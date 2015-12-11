@@ -8,6 +8,7 @@ import Signuppage from "./Views/signuppage";
 import Homepage from "./Views/homepage";
 import Signinpage from "./Views/signinpage";
 import Footer from "./Views/footer";
+import Notfoundpage from "./Views/notfoundpage";
 
 class App extends React.Component{
 
@@ -30,6 +31,7 @@ ReactDOM.render((
       <Route path="signup" component={Signuppage} />
       <Route path="signin" component={Signinpage} />
     </Route>
+    <Route path="*" component={Notfoundpage} />
   </Router>
 ), document.getElementById('app'));
 
