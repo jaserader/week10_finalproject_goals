@@ -6,12 +6,12 @@ class Footer extends React.Component{
     return(
 
       <footer>
-        <a id="logo" href=""><i className="fa fa-list-ul"></i><span>GOALS</span></a>
+        <Link to="home" id="logo" href="home"><i className="fa fa-list-ul"></i><span>GOALS</span></Link>
 
         <nav id="socialNav">
-          <Link to="home"><i className="fa fa-facebook-official"></i></Link>
-          <Link to="home"><i className="fa fa-twitter-square"></i></Link>
-          <Link to="home"><i className="fa fa-instagram"></i></Link>
+          <Link to=""><i className="fa fa-facebook-official"></i></Link>
+          <Link to=""><i className="fa fa-twitter-square"></i></Link>
+          <Link to=""><i className="fa fa-instagram"></i></Link>
         </nav>
 
       </footer>

@@ -13,7 +13,7 @@ class Splashpage extends React.Component {
           </nav>
 
         <section id="hero">
-          <button id="signupBtn">sign up</button>
+          <Link id="signupBtn" to="signin">sign up</Link>
           <span id="textTop">Allow your friends to</span>
           <span id="textBottom">help you accomplish your goals.</span>
         </section>
