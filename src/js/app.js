@@ -7,6 +7,7 @@ import Header from "./Views/header";
 import Signuppage from "./Views/signuppage";
 import Homepage from "./Views/homepage";
 import Signinpage from "./Views/signinpage";
+import Footer from "./Views/footer";
 
 class App extends React.Component{
 
@@ -15,6 +16,7 @@ class App extends React.Component{
       <div>
         <Header/>
         {this.props.children}
+        <Footer/>
       </div>
     )
   }

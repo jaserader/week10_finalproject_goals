@@ -5,11 +5,10 @@ class Header extends React.Component{
   render(){
     return(
       <header>
-
-        <Link id="logo" to="home"><i className="fa fa-flag-checkered"></i><span>Goals</span></Link>
-
-        <nav>
-          <a>logout</a>
+        <Link id="logo" to="home"><i className="fa fa-list-ul"></i><span>GOALS</span></Link>
+        <nav id="headerNav">
+          <input type="text" placeholder="search"></input>
+          <a href="">logout</a>
         </nav>
       </header>
     )
