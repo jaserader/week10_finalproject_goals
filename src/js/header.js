@@ -5,7 +5,7 @@ class Header extends React.Component{
     return(
       <header>
 
-        <a id="logo" href=""><i className="fa fa-flag-checkered"></i><span>Goals</span></a>
+        <a id="logo" href=""><i className="fa fa-list-ul"></i><span>GOALS</span></a>
 
         <nav id="headerNav">
           <input type="text" placeholder="search"></input>

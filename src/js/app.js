@@ -4,6 +4,7 @@ import { Router, Route, IndexRoute } from 'react-router';
 
 import Splashpage from "./splashpage";
 import Header from "./header";
+import Footer from "./footer";
 
 class App extends React.Component{
 
@@ -12,6 +13,7 @@ class App extends React.Component{
       <div>
         <Header/>
         {this.props.children}
+        <Footer/>
       </div>
     )
   }

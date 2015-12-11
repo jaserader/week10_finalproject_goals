@@ -8,15 +8,26 @@ class Splashpage extends React.Component {
         <div id="splashpage">
             <nav id="homeNav">
               <span>Bringing responsibility to social networking.</span>
-              <a href="">signup</a>
+              <a href="">sign up</a>
             </nav>
 
           <section id="hero">
-            <button id="signupBtn">signup</button>
+            <button id="signupBtn">sign up</button>
+            <span id="textTop">Allow your friends to</span>
+            <span id="textBottom">help you accomplish your goals.</span>
           </section>
 
           <section id="goalsInfo">
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <div id="customerPicture"></div>
+            <div id="customerPicture"></div>
+            <div id="customerPicture"></div>
+          </section>
+
+          <section>
+            <div id="customerQuote">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            <div id="customerQuote">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            <div id="customerQuote">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+
           </section>
 
         </div>
