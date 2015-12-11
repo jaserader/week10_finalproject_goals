@@ -1,12 +1,11 @@
 import React from 'react';
+import { Link } from "react-router";
 
 class Header extends React.Component{
   render(){
     return(
       <header>
-
-        <a id="logo" href=""><i className="fa fa-list-ul"></i><span>GOALS</span></a>
-
+        <Link id="logo" to="home"><i className="fa fa-list-ul"></i><span>GOALS</span></Link>
         <nav id="headerNav">
           <input type="text" placeholder="search"></input>
           <a href="">logout</a>
