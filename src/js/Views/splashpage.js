@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Homepage extends React.Component {
+class Splashpage extends React.Component {
 
   render(){
 
@@ -8,7 +8,7 @@ class Homepage extends React.Component {
         <div id="homepage">
             <nav id="homeNav">
               <span>Bringing responsibility to social networking.</span>
-              <a href="">signup</a>
+              <a href="#/signup">signup</a>
             </nav>
 
           <section id="hero"></section>
@@ -18,4 +18,4 @@ class Homepage extends React.Component {
   }
 }
 
-export default Homepage;
+export default Splashpage;

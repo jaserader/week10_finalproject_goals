@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from "react-router";
 
 class Header extends React.Component{
   render(){
     return(
       <header>
 
-        <a id="logo" href=""><i className="fa fa-flag-checkered"></i><span>Goals</span></a>
+        <Link id="logo" to="home"><i className="fa fa-flag-checkered"></i><span>Goals</span></Link>
 
         <nav>
           <a>logout</a>
