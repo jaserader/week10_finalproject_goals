@@ -9,9 +9,9 @@ class Signinpage extends React.Component {
         <Link to="home">dashboard/homepage</Link>
 
         <form id="signinForm">
-          <label for="username" id="usernameLabel">Username</label>
+          <label htmlFor="username" id="usernameLabel">Username</label>
           <input type="text" id="username" />
-          <label for="password" id="passwordLabel">Password</label>
+          <label htmlFor="password" id="passwordLabel">Password</label>
           <input type="password" id="password" />
           <input type="submit" id="submit" />
         </form>
