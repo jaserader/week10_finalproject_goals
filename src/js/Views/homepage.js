@@ -20,17 +20,17 @@ class Homepage extends React.Component {
             <span>Following List:</span>
 
             <ul id="followingList">
-              <Link>Freddy Roberts</Link>
-              <Link>Freddy Roberts</Link>
-              <Link>Freddy Roberts</Link>
-              <Link>Freddy Roberts</Link>
-              <Link>Freddy Roberts</Link>
-              <Link>Freddy Roberts</Link>
-              <Link>Freddy Roberts</Link>
-              <Link>Freddy Roberts</Link>
-              <Link>Freddy Roberts</Link>
-              <Link>Freddy Roberts</Link>
-              <Link>Freddy Roberts</Link>
+              <Link to="home">Freddy Roberts</Link>
+              <Link to="home">Freddy Roberts</Link>
+              <Link to="home">Freddy Roberts</Link>
+              <Link to="home">Freddy Roberts</Link>
+              <Link to="home">Freddy Roberts</Link>
+              <Link to="home">Freddy Roberts</Link>
+              <Link to="home">Freddy Roberts</Link>
+              <Link to="home">Freddy Roberts</Link>
+              <Link to="home">Freddy Roberts</Link>
+              <Link to="home">Freddy Roberts</Link>
+              <Link to="home">Freddy Roberts</Link>
             </ul>
           </section>
         </aside>

@@ -313,96 +313,6 @@ footer{
   }
 }
 
-@media screen and (max-width: 1113px) {
-
-  header{
-    #logo{
-      span {
-        margin-left: 5px;
-      }
-    }
-
-    #headerNav{
-      a{
-        @include span-columns(2.8)
-      }
-    }
-  }
-
-  #splashpage{
-    #homeNav{
-
-      span{
-        @include shift(.5);
-        @include span-columns(6);
-        font-weight: lighter;
-      }
-
-      a{
-        margin: 0 5px 0 38%;
-      }
-    }
-  }
-
-  #hero{
-    #textTop{
-      @include span-columns(5);
-      margin-left: 50%;
-      margin-top: 70px;
-      font-size: 3vw;
-    }
-
-    #textBottom{
-      @include span-columns(6);
-      margin-left: 53%;
-      font-size: 2.8vw;
-      margin-top: 15px;
-    }
-  }
-
-  #customerPicture{
-    @include span-columns(3);
-    margin-top: 5%;
-    height: 250px;
-    background: gray url("../../assets/man.jpg") no-repeat -292px -73px;
-    border-radius: 50%;
-    top: 500px;
-
-    &:first-of-type{
-      @include shift(1.5);
-    }
-  }
-
-  #customerQuote{
-    @include span-columns(3);
-    height: 200px;
-    background: #fff;
-    margin-top: 60px;
-    font-weight: lighter;
-    color: gray;
-    padding: 7px;
-
-    &:first-of-type{
-      @include shift(1.5);
-    }
-  }
-
-  footer{
-    #logo{
-      span {
-        margin-left: 5px;
-      }
-    }
-
-    #socialNav{
-      @include span-columns(2.3);
-      @include shift(4.8);
-      margin-right: 0;
-    }
-  }
-
-}
-
 @media (min-width:769px) {
   .checkSize {
     padding-top: 0px;
@@ -475,7 +385,7 @@ footer{
     @include shift(.5);
     height: 180px;
     @include span-columns(3.0242);
-    background-position: -330px -100px;  
+    background-position: -330px -100px;
 
     &:first-of-type{
       @include shift(1);
@@ -541,6 +451,130 @@ footer{
     }
   }
 }
+
+//////////////////////////////////////////////////////////////////////////////
+//SIGN UP
+//////////////////////////////////////////////////////////////////////////////
+
+#signupPage{
+  color: #3878D7;
+  font-weight: lighter;
+  font-size: 20px;
+
+#signupForm{
+
+  label{
+    @include span-columns(4);
+    @include shift(4);
+    margin-bottom: 5px;
+
+    &:first-of-type{
+      margin-top: 40px;
+    }
+  }
+
+  input{
+    @include span-columns(4);
+    @include shift(4);
+    margin-bottom: 5px;
+    border: #A0A0A0 1px solid;
+    border-radius: 3px;
+    color: gray;
+
+    &:focus{
+      height: 32px;
+    }
+
+    &:last-of-type{
+      height: 32px;
+      margin-top: 5px;
+      color: #fff;
+      border: none;
+      background: #F7263C;
+
+        &:hover{
+          background: #B71C2D;
+        }
+
+      }
+    }
+  }
+
+  a{
+    @include span-columns(4);
+    @include shift(7);
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  @media screen and (max-width: 910px) {
+
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// SIGN IN PAGE
+////////////////////////////////////////////////////////////////////////////////
+
+#signinPage{
+  color: #3878D7;
+  font-weight: lighter;
+  font-size: 20px;
+
+#signinForm{
+
+  label{
+    @include span-columns(4);
+    @include shift(4);
+    margin-bottom: 5px;
+
+    &:first-of-type{
+      margin-top: 40px;
+    }
+  }
+
+  input{
+    @include span-columns(4);
+    @include shift(4);
+    margin-bottom: 5px;
+    border: #A0A0A0 1px solid;
+    border-radius: 3px;
+    color: gray;
+
+    &:focus{
+      height: 32px;
+    }
+
+    &:last-of-type{
+      height: 32px;
+      margin-top: 5px;
+      color: #fff;
+      border: none;
+      background: #F7263C;
+
+        &:hover{
+          background: #B71C2D;
+        }
+
+      }
+    }
+  }
+
+  a{
+    @include span-columns(4);
+    @include shift(7);
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // HOME PAGE
