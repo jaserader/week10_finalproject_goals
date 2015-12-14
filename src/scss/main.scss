@@ -119,6 +119,9 @@ header{
         position: absolute;
         top: 195px;
         left: 15px;
+        text-decoration: none;
+        text-align: center;
+        padding-top: .6%;
 
         &:hover{
           background: #B71C2D;
@@ -127,15 +130,15 @@ header{
 
       #textTop{
         @include span-columns(5);
-        @include shift(6);
+        margin-left: 50%;
         margin-top: 70px;
-        font-size: 40px;
+        font-size: 2.6vw;
       }
 
       #textBottom{
         @include span-columns(5);
-        @include shift(6.3);
-        font-size: 38px;
+        margin-left: 53%;
+        font-size: 2.5vw;
         margin-top: 15px;
       }
   }
@@ -234,6 +237,11 @@ footer{
         &:first-of-type{
           @include shift(4);
         }
+
+        &:hover{
+          color: red;
+          text-decoration: underline;
+        }
       }
   }
 
@@ -250,6 +258,11 @@ footer{
         &:first-of-type{
           @include shift(4);
         }
+
+        &:hover{
+          color: #5F95E3;
+          text-decoration: underline;
+        }
       }
   }
 
@@ -265,6 +278,11 @@ footer{
 
         &:first-of-type{
           @include shift(4);
+        }
+
+        &:hover{
+          color: red;
+          text-decoration: underline;
         }
       }
   }
@@ -283,6 +301,116 @@ footer{
         &:first-of-type{
           @include shift(4);
         }
+
+        &:hover{
+          text-decoration: underline;
+          color: #5F95E3;
+        }
       }
   }
+}
+
+@media screen and (max-width: 1113px) {
+
+  header{
+    #logo{
+      span {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  #splashpage{
+    #homeNav{
+
+      span{
+        @include shift(.5);
+        @include span-columns(6);
+        font-weight: lighter;
+      }
+
+      a{
+        margin: 0 5px 0 38%;
+      }
+    }
+  }
+
+  #hero{
+    #textTop{
+      @include span-columns(5);
+      margin-left: 50%;
+      margin-top: 70px;
+      font-size: 3.6vw;
+    }
+
+    #textBottom{
+      @include span-columns(5);
+      margin-left: 53%;
+      font-size: 3.4vw;
+      margin-top: 15px;
+    }
+  }
+
+  #customerPicture{
+    @include span-columns(3);
+    margin-top: 5%;
+    height: 250px;
+    background: gray url("../../assets/man.jpg") no-repeat -292px -73px;
+    border-radius: 50%;
+    top: 500px;
+
+    &:first-of-type{
+      @include shift(1.5);
+    }
+  }
+
+  #customerQuote{
+    @include span-columns(3);
+    height: 200px;
+    background: #fff;
+    margin-top: 60px;
+    font-weight: lighter;
+    color: gray;
+    padding: 7px;
+
+    &:first-of-type{
+      @include shift(1.5);
+    }
+  }
+
+  footer{
+    #logo{
+      span {
+        margin-left: 5px;
+      }
+    }
+
+    #socialNav{
+      @include span-columns(2.3);
+      @include shift(4.8);
+      margin-right: 0;
+    }
+  }
+
+}
+
+@media screen and (max-width: 890px) {
+
+  #splashpage{
+    #homeNav{
+
+      span{
+        @include shift(.5);
+        @include span-columns(5);
+        font-weight: lighter;
+      }
+
+      a{
+        @include span-columns(1);
+        margin: 0 5px 0 46%;
+      }
+    }
+  }
+
+
 }
