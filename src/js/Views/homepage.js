@@ -36,7 +36,23 @@ class Homepage extends React.Component {
         </aside>
 
         <section id="goalsListBox">
-          <span>Goals</span>
+          <span id="goalsLabel">Goals</span>
+
+          <div id="goal">
+            <div id="completedBox"><button id="completed"></button></div>
+
+            <input id="goalTxt"></input>
+
+            <a><i class="fa fa-caret-square-o-down"></i></a>
+
+            <button className="voteBtn">+</button>
+            <button className="voteBtn">-</button>
+
+            <span className="votes">Votes:</span>
+            <span className="votes">10</span>
+
+          </div>
+
         </section>
 
       </div>

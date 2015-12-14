@@ -50,6 +50,8 @@ header{
       height: 25px;
       font-size: 15px;
       font-weight: lighter;
+      border-radius: 3px;
+      border: gray 1px solid;
     }
 
     a{
@@ -571,7 +573,7 @@ footer{
 
     #userInfo{
       @include span-columns(11.5);
-      @include shift(.5);
+      @include shift(.85);
       background: #F78883;
       border: #A0A0A0 2px solid;
       border-radius: 8px;
@@ -600,14 +602,14 @@ footer{
         color: #3878D7;
 
         &:first-of-type{
-          margin-top: 15px;
+          margin-top: 12px;
         }
       }
     }
 
     #friendsList{
       @include span-columns(11.5);
-      @include shift(.5);
+      @include shift(.85);
       height: 400px;
       background: #F3F3F3;
       border: #A0A0A0 2px solid;
@@ -648,7 +650,7 @@ footer{
     border: #A0A0A0 2px solid;
     border-radius: 8px;
 
-    span{
+    #goalsLabel{
       @include span-columns(11);
       @include shift(.5);
       margin-top: 20px;
@@ -659,6 +661,63 @@ footer{
       color: #fff;
       border-radius: 8px;
 
+    }
+
+    #goal{
+      @include span-columns(11);
+      @include shift(.5);
+      height: 100px;
+      margin-top: 10px;
+      border: #3878D7 2px solid;
+      border-radius: 8px;
+
+      #completedBox{
+        @include span-columns(1);
+        padding: 35px 0 0 26px;
+        height: 100px;
+
+        button{
+          width: 25px;
+          height: 25px;
+          border: gray 1px solid;
+          border-radius: 50%;
+
+          &:hover{
+            background: red;
+          }
+        }
+      }
+
+      #goalTxt{
+        @include span-columns(10.5);
+        height: 40px;
+        margin-top: 10px;
+      }
+
+      .votes{
+        @include span-columns(.6);
+        margin-top: 15px;
+      }
+
+      .voteBtn{
+        @include span-columns(.6);
+        height: 30px;
+        background: #F7263C;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 20px;
+        margin-top: 8px;
+
+        &:first-of-type{
+          @include shift(1);
+          margin-right: 2px;
+        }
+
+        &:hover{
+          background: #B71C2D;
+        }
+      }
     }
   }
 }
