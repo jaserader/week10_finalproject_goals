@@ -401,12 +401,12 @@ footer{
 
 }
 
-@media screen and (max-width: 890px) {
+@media (max-width: 768px) and (min-width: 480px) {
 
   header{
     #headerNav{
       a{
-        @include span-columns(2.85)
+        @include span-columns(.5)
       }
     }
   }
@@ -416,13 +416,14 @@ footer{
 
       span{
         @include shift(.5);
-        @include span-columns(5);
+        @include span-columns(6);
         font-weight: lighter;
       }
 
       a{
-        @include span-columns(1);
-        margin: 0 5px 0 46%;
+        @include span-columns(1.1);
+        @include shift(4.3);
+        @include omega(n);
         height: 20px;
       }
     }
