@@ -15,6 +15,7 @@ header{
   @include span-columns(12);
   height: 60px;
   padding: 12px 0 0 0;
+  border-bottom: #F3F3F3 3px solid;
 
 
   #logo {
@@ -73,8 +74,8 @@ header{
 
   #homeNav {
     background-color: #F3F3F3;
-    height: 30px;
-    padding: 7px 0 0 0;
+    height: 27px;
+    padding: 4px 0 0 0;
 
     span{
       @include shift(.5);
@@ -404,6 +405,10 @@ footer{
 @media (max-width: 768px) and (min-width: 480px) {
 
   header{
+    #logo{
+
+    }
+
     #headerNav{
       a{
         @include span-columns(.5)
@@ -429,5 +434,128 @@ footer{
     }
   }
 
+
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//SIGN UP
+//////////////////////////////////////////////////////////////////////////////
+
+#signupPage{
+  color: #3878D7;
+  font-weight: lighter;
+  font-size: 20px;
+
+#signupForm{
+
+  label{
+    @include span-columns(4);
+    @include shift(4);
+    margin-bottom: 5px;
+
+    &:first-of-type{
+      margin-top: 40px;
+    }
+  }
+
+  input{
+    @include span-columns(4);
+    @include shift(4);
+    margin-bottom: 5px;
+    border: #A0A0A0 1px solid;
+    border-radius: 3px;
+    color: gray;
+
+    &:focus{
+      height: 32px;
+    }
+
+    &:last-of-type{
+      height: 32px;
+      margin-top: 5px;
+      color: #fff;
+      border: none;
+      background: #F7263C;
+
+        &:hover{
+          background: #B71C2D;
+        }
+
+      }
+    }
+  }
+
+  a{
+    @include span-columns(4);
+    @include shift(7);
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  @media screen and (max-width: 910px) {
+
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// SIGN IN PAGE
+////////////////////////////////////////////////////////////////////////////////
+
+#signinPage{
+  color: #3878D7;
+  font-weight: lighter;
+  font-size: 20px;
+
+#signinForm{
+
+  label{
+    @include span-columns(4);
+    @include shift(4);
+    margin-bottom: 5px;
+
+    &:first-of-type{
+      margin-top: 40px;
+    }
+  }
+
+  input{
+    @include span-columns(4);
+    @include shift(4);
+    margin-bottom: 5px;
+    border: #A0A0A0 1px solid;
+    border-radius: 3px;
+    color: gray;
+
+    &:focus{
+      height: 32px;
+    }
+
+    &:last-of-type{
+      height: 32px;
+      margin-top: 5px;
+      color: #fff;
+      border: none;
+      background: #F7263C;
+
+        &:hover{
+          background: #B71C2D;
+        }
+
+      }
+    }
+  }
+
+  a{
+    @include span-columns(4);
+    @include shift(7);
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
 
 }
