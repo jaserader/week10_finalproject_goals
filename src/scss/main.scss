@@ -319,6 +319,12 @@ footer{
         margin-left: 5px;
       }
     }
+
+    #headerNav{
+      a{
+        @include span-columns(2.8)
+      }
+    }
   }
 
   #splashpage{
@@ -341,13 +347,13 @@ footer{
       @include span-columns(5);
       margin-left: 50%;
       margin-top: 70px;
-      font-size: 3.6vw;
+      font-size: 3vw;
     }
 
     #textBottom{
-      @include span-columns(5);
+      @include span-columns(6);
       margin-left: 53%;
-      font-size: 3.4vw;
+      font-size: 2.8vw;
       margin-top: 15px;
     }
   }
@@ -397,6 +403,14 @@ footer{
 
 @media screen and (max-width: 890px) {
 
+  header{
+    #headerNav{
+      a{
+        @include span-columns(2.85)
+      }
+    }
+  }
+
   #splashpage{
     #homeNav{
 
@@ -409,6 +423,7 @@ footer{
       a{
         @include span-columns(1);
         margin: 0 5px 0 46%;
+        height: 20px;
       }
     }
   }
