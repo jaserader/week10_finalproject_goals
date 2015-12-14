@@ -180,7 +180,7 @@ footer{
   @include span-columns(12);
   height: 250px;
   background: #A0A0A0;
-  margin-top: 50px;
+  margin-top: 40px;
 
   #logo {
     @include span-columns(4);
@@ -557,4 +557,108 @@ footer{
     }
   }
 
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// HOME PAGE
+////////////////////////////////////////////////////////////////////////////////
+
+#homepage{
+
+  aside{
+    @include span-columns(3);
+    margin-top: 10px;
+
+    #userInfo{
+      @include span-columns(11.5);
+      @include shift(.5);
+      background: #F78883;
+      border: #A0A0A0 2px solid;
+      border-radius: 8px;
+      margin-bottom: 5px;
+
+      #userAvatar{
+          @include span-columns(6);
+          margin-top: 5%;
+          height: 150px;
+          background: gray url("../../assets/man.jpg") no-repeat -335px -92px;
+          border-radius: 50%;
+          border: #fff 4px solid;
+          top: 500px;
+
+          &:first-of-type{
+            @include shift(1.5);
+          }
+        }
+
+      span{
+        @include span-columns(10);
+        @include shift(3);
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: lighter;
+        color: #3878D7;
+
+        &:first-of-type{
+          margin-top: 15px;
+        }
+      }
+    }
+
+    #friendsList{
+      @include span-columns(11.5);
+      @include shift(.5);
+      height: 400px;
+      background: #F3F3F3;
+      border: #A0A0A0 2px solid;
+      border-radius: 8px;
+
+      span{
+        @include span-columns(10);
+        @include shift(1);
+        font-size: 20px;
+        font-weight: lighter;
+        color: #3878D7;
+        margin-top: 10px;
+        text-decoration: underline;
+      }
+
+      #followingList{
+        @include span-columns(12);
+
+        a{
+          @include span-columns(10);
+          text-decoration: none;
+          color: black;
+          margin-top: 5px;
+
+          &:hover{
+            color: red;
+          }
+        }
+      }
+    }
+  }
+
+  #goalsListBox{
+    @include span-columns(8.7);
+    margin-top: 10px;
+    height: 657px;
+    background: #F3F3F3;
+    border: #A0A0A0 2px solid;
+    border-radius: 8px;
+
+    span{
+      @include span-columns(11);
+      @include shift(.5);
+      margin-top: 20px;
+      padding: 5px 0 5px 15px;
+      font-size: 30px;
+      font-weight: lighter;
+      background: #3878D7;
+      color: #fff;
+      border-radius: 8px;
+
+    }
+  }
 }
