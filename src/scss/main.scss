@@ -326,13 +326,13 @@ footer{
   }
 
   a#logo {
-    @include span-columns(6);
+    @include span-columns(7);
   }
 
   header{
     #headerNav{
       @include span-columns(3);
-      @include shift(2.38);
+      @include shift(1.38);
       a{
         @include span-columns(3.3)
       }
@@ -350,7 +350,7 @@ footer{
 
       a{
         @include span-columns(1.1);
-        @include shift(4.3);
+        @include shift(4.305);
         @include omega(n);
         height: 20px;
       }
@@ -394,6 +394,7 @@ footer{
 
   div#customerQuote{
     @include shift(.5);
+    @include span-columns(3);
 
     &:first-of-type{
       @include shift(1);
@@ -402,10 +403,10 @@ footer{
 
   footer {
     #socialNav {
-      @include shift(3);
+      @include shift(2);
 
       a{
-        @include span-columns(3);
+        @include span-columns(3.3);
       }
     }
 
@@ -414,7 +415,7 @@ footer{
         @include span-columns(3);
 
         &:first-of-type{
-          @include shift(3.6);
+          @include shift(3.5);
         }
       }
     }
@@ -425,7 +426,7 @@ footer{
 
 
         &:first-of-type{
-          @include shift(3.6);
+          @include shift(3.5);
         }
       }
     }
@@ -435,7 +436,7 @@ footer{
         @include span-columns(3);
 
         &:first-of-type{
-          @include shift(3.6);
+          @include shift(3.5);
         }
       }
     }
@@ -445,7 +446,7 @@ footer{
       @include span-columns(3);
 
       &:first-of-type{
-        @include shift(3.6);
+        @include shift(3.5);
       }
       }
     }
@@ -508,10 +509,6 @@ footer{
     &:hover{
       text-decoration: underline;
     }
-  }
-
-  @media screen and (max-width: 910px) {
-
   }
 }
 
