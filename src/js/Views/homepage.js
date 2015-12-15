@@ -11,8 +11,8 @@ class Homepage extends React.Component {
 
             <div id="userAvatar"></div>
 
-            <span>name: Timothy Gass</span>
-            <span>username: timgass25</span>
+            <span>Name: Timothy Gass</span>
+            <span>Username: timgass25</span>
 
           </section>
 
@@ -43,13 +43,36 @@ class Homepage extends React.Component {
 
             <input id="goalTxt"></input>
 
-            <a><i class="fa fa-caret-square-o-down"></i></a>
+            <button className="voteBtn">+</button>
+            <button className="voteBtn">-</button>
+
+            <span className="votes">Votes:</span>
+            <span className="votes">10</span>
+
+            <Link to="/"><i class="fa fa-caret-square-o-down"></i></Link>
+
+          </div>
+
+          <div id="goalExpanded">
+            <div id="completedBox"><button id="completed"></button></div>
+
+            <input id="goalTxt"></input>
 
             <button className="voteBtn">+</button>
             <button className="voteBtn">-</button>
 
             <span className="votes">Votes:</span>
             <span className="votes">10</span>
+
+            <Link to="/"><i class="fa fa-caret-square-o-down"></i></Link>
+
+            <div id="commentSection">
+              <span>Comments:</span>
+              <input id="newComment"  placeholder="New Comment...."></input>
+              <input id="existingComment"></input>
+              <input id="existingComment"></input>
+              <input id="existingComment"></input>
+            </div>
 
           </div>
 

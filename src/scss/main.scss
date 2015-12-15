@@ -15,6 +15,7 @@ header{
   @include span-columns(12);
   height: 60px;
   padding: 12px 0 0 0;
+  border-bottom: #F3F3F3 3px solid;
 
 
   #logo {
@@ -589,8 +590,9 @@ footer{
       @include span-columns(11.5);
       @include shift(.85);
       background: #F78883;
-      border: #A0A0A0 2px solid;
-      border-radius: 8px;
+      // border: #A0A0A0 2px solid;
+      border-radius: 5px;
+      box-shadow: 4px 4px #A9AEBD;
       margin-bottom: 5px;
 
       #userAvatar{
@@ -609,7 +611,7 @@ footer{
 
       span{
         @include span-columns(10);
-        @include shift(3);
+        @include shift(2);
         margin-bottom: 10px;
         font-size: 20px;
         font-weight: lighter;
@@ -626,12 +628,13 @@ footer{
       @include shift(.85);
       height: 400px;
       background: #F3F3F3;
-      border: #A0A0A0 2px solid;
-      border-radius: 8px;
+      margin-top: 8px;
+      border-radius: 5px;
+      box-shadow: 4px 4px #A9AEBD;
 
       span{
         @include span-columns(10);
-        @include shift(1);
+        @include shift(2);
         font-size: 20px;
         font-weight: lighter;
         color: #3878D7;
@@ -644,8 +647,11 @@ footer{
 
         a{
           @include span-columns(10);
+          @include shift(1);
           text-decoration: none;
-          color: black;
+          color: gray;
+          font-weight: lighter;
+          font-size: 18px;
           margin-top: 5px;
 
           &:hover{
@@ -661,8 +667,9 @@ footer{
     margin-top: 10px;
     height: 657px;
     background: #F3F3F3;
-    border: #A0A0A0 2px solid;
+    // border: #A0A0A0 2px solid;
     border-radius: 8px;
+    box-shadow: 4px 4px #A9AEBD;
 
     #goalsLabel{
       @include span-columns(11);
@@ -673,7 +680,8 @@ footer{
       font-weight: lighter;
       background: #3878D7;
       color: #fff;
-      border-radius: 8px;
+      border-radius: 5px;
+      box-shadow: 4px 4px #A9AEBD;
 
     }
 
@@ -682,20 +690,23 @@ footer{
       @include shift(.5);
       height: 100px;
       margin-top: 10px;
-      border: #3878D7 2px solid;
-      border-radius: 8px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 4px 4px #A9AEBD;
       background: #6FA9FC;
+      position: relative;
 
       #completedBox{
         @include span-columns(1);
         padding: 35px 0 0 26px;
         height: 100px;
 
+
         button{
           width: 25px;
           height: 25px;
           background: #fff;
-          border: gray 1px solid;
+          border: none;
           border-radius: 50%;
 
           &:hover{
@@ -715,12 +726,19 @@ footer{
       .votes{
         @include span-columns(.6);
         margin-top: 15px;
+        color: #fff;
+        font-weight: lighter;
+        font-size: 18px;
+
+        &:first-of-type{
+          margin-right: 25px;
+        }
       }
 
       .voteBtn{
         @include span-columns(.6);
         height: 30px;
-        background: #F7263C;
+        background: #B71C2D;
         border: none;
         border-radius: 5px;
         color: #fff;
@@ -733,7 +751,131 @@ footer{
         }
 
         &:hover{
-          background: #B71C2D;
+          background: #F7263C;
+        }
+      }
+
+      a{
+        @include span-columns(1);
+        position: absolute;
+        height: 30px;
+
+        i{
+          @include span-columns(12);
+          color: red;
+          height: 30px;
+          font-size: 30px;
+        }
+      }
+    }
+
+    #goalExpanded{
+      @include span-columns(11);
+      @include shift(.5);
+      height: 300px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 4px 4px #A9AEBD;
+      background: #6FA9FC;
+      position: relative;
+
+      #completedBox{
+        @include span-columns(1);
+        padding: 35px 0 0 26px;
+        height: 100px;
+
+
+        button{
+          width: 25px;
+          height: 25px;
+          background: #fff;
+          border: none;
+          border-radius: 50%;
+
+          &:hover{
+            background: red;
+          }
+        }
+      }
+
+      #goalTxt{
+        @include span-columns(10.5);
+        height: 40px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: none;
+      }
+
+      .votes{
+        @include span-columns(.6);
+        margin-top: 15px;
+        color: #fff;
+        font-weight: lighter;
+        font-size: 18px;
+
+        &:first-of-type{
+          margin-right: 25px;
+        }
+      }
+
+      .voteBtn{
+        @include span-columns(.6);
+        height: 30px;
+        background: #B71C2D;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 20px;
+        margin-top: 10px;
+
+        &:first-of-type{
+          @include shift(1);
+          margin-right: 2px;
+        }
+
+        &:hover{
+          background: #F7263C;
+        }
+      }
+
+      a{
+        @include span-columns(1);
+        position: absolute;
+        height: 30px;
+
+        i{
+          @include span-columns(12);
+          color: red;
+          height: 30px;
+          font-size: 30px;
+        }
+      }
+
+      #commentSection{
+        @include span-columns(12);
+        border-top: #5987C9 3px solid;
+        border-radius: 5px;
+        height: 200px;
+
+        span{
+          @include span-columns(11);
+          @include shift(.5);
+          font-size: 18px;
+          margin-top: 5px;
+          color: #fff;
+          font-weight: lighter;
+        }
+
+        input{
+          @include span-columns(10.5);
+          @include shift(1);
+          height: 25px;
+          margin-top: 10px;
+          border-radius: 5px;
+          border: none;
+          padding-left: 5px;
+          font-size: 14px;
         }
       }
     }
