@@ -31,8 +31,8 @@ class Splashpage extends React.Component {
 
         <section id="hero">
           <Link id="signupBtn" to="signup">sign up</Link>
-          <span id="textTop">Allow your friends to</span>
-          <span id="textBottom">help you accomplish your goals.</span>
+          <span id="textTop" className="checkSize">Allow your friends to</span>
+          <span id="textBottom" className="checkSize">help you accomplish your goals.</span>
         </section>
 
         <section id="goalsInfo">
