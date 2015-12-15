@@ -670,6 +670,7 @@ footer{
       margin-top: 10px;
       border: #3878D7 2px solid;
       border-radius: 8px;
+      background: #6FA9FC;
 
       #completedBox{
         @include span-columns(1);
@@ -679,6 +680,7 @@ footer{
         button{
           width: 25px;
           height: 25px;
+          background: #fff;
           border: gray 1px solid;
           border-radius: 50%;
 
@@ -692,6 +694,8 @@ footer{
         @include span-columns(10.5);
         height: 40px;
         margin-top: 10px;
+        border-radius: 5px;
+        border: none;
       }
 
       .votes{
