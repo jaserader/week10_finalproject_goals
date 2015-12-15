@@ -357,6 +357,7 @@ footer{
       }
     }
     #hero {
+      background-position: center relative;
 
       span{
         font-size: 28px;
@@ -396,6 +397,7 @@ footer{
   div#customerQuote{
     @include shift(.5);
     @include span-columns(3);
+    height: 270px;
 
     &:first-of-type{
       @include shift(1);
