@@ -70,7 +70,7 @@ class Homepage extends React.Component {
 
             <span className="votes">Votes:</span>
             <span className="votes">10</span>
-            
+
             <Link to="/"><i className="fa fa-angle-down"></i></Link>
 
             <div id="commentSection">
