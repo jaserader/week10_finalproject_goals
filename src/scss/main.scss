@@ -711,7 +711,7 @@ footer{
         }
 
         &:last-of-type{
-          @include span-columns(2);
+          @include span-columns(3);
           border: none;
         }
 
@@ -794,10 +794,8 @@ footer{
 
       a{
         @include span-columns(1);
-        position: absolute;
-        top: 63px;
-        left: 882px;
-        height: 30px;
+        @include shift(6.7);
+        @include omega(n);
 
         i{
           @include span-columns(12);
@@ -884,11 +882,8 @@ footer{
 
       a{
         @include span-columns(1);
-        position: absolute;
-        top: 63px;
-        left: 882px;
-        height: 30px;
-
+        @include shift(6.7);
+        @include omega(n);
         i{
           @include span-columns(12);
           color: #B71C2D;
