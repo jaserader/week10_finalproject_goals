@@ -64,7 +64,7 @@ class Homepage extends React.Component {
             <span className="votes">Votes:</span>
             <span className="votes">10</span>
 
-            <Link to="/"><i class="fa fa-caret-square-o-down"></i></Link>
+            <Link to="/"><i className="fa fa-caret-square-o-down"></i></Link>
 
             <div id="commentSection">
               <span>Comments:</span>
@@ -75,7 +75,7 @@ class Homepage extends React.Component {
             </div>
 
           </div>
-
+          {this.props.children}
         </section>
 
       </div>
