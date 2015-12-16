@@ -9,6 +9,7 @@ import Homepage from "./Views/homepage";
 import Signinpage from "./Views/signinpage";
 import Footer from "./Views/footer";
 import Notfoundpage from "./Views/notfoundpage";
+import CommentsView from "./Views/commentsview";
 
 class App extends React.Component{
 
@@ -27,7 +28,9 @@ ReactDOM.render((
   <Router>
     <Route path="/" component={App} >
       <IndexRoute component={Splashpage} />
-      <Route path="home" component={Homepage} />
+      <Route path="home" component={Homepage} >
+        <Route path="goals/:id" component={CommentsView} />
+      </Route>
       <Route path="signup" component={Signuppage} />
       <Route path="signin" component={Signinpage} />
     </Route>
