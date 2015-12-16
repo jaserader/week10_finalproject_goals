@@ -209,7 +209,7 @@ footer{
 
   #socialNav{
     @include span-columns(2);
-    @include shift(5);
+    @include shift(5.2);
     margin-top: 30px;
 
     a{
@@ -239,7 +239,7 @@ footer{
         font-size: 20px;
 
         &:first-of-type{
-          @include shift(4);
+          @include shift(4.4);
         }
 
         &:hover{
@@ -260,7 +260,7 @@ footer{
         font-size: 20px;
 
         &:first-of-type{
-          @include shift(4);
+          @include shift(4.4);
         }
 
         &:hover{
@@ -281,7 +281,7 @@ footer{
         font-size: 20px;
 
         &:first-of-type{
-          @include shift(4);
+          @include shift(4.4);
         }
 
         &:hover{
@@ -303,7 +303,7 @@ footer{
         font-size: 20px;
 
         &:first-of-type{
-          @include shift(4);
+          @include shift(4.4);
         }
 
         &:hover{
@@ -464,6 +464,7 @@ footer{
   color: #3878D7;
   font-weight: lighter;
   font-size: 20px;
+  height: 600px;
 
 #signupForm{
 
@@ -523,8 +524,10 @@ footer{
   color: #3878D7;
   font-weight: lighter;
   font-size: 20px;
+  height: 600px;
 
 #signinForm{
+  padding-top: 150px;
 
   label{
     @include span-columns(4);
