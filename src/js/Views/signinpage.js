@@ -27,7 +27,6 @@ class Signinpage extends React.Component {
         alert("Login Failed!")
         return error;
       }
-      console.log(response);
       this.props.history.pushState(null, "home")
     }
 

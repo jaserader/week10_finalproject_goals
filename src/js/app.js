@@ -12,11 +12,16 @@ import Notfoundpage from "./Views/notfoundpage";
 import CommentsView from "./Views/commentsview";
 
 class App extends React.Component{
+  constructor(props){
+    super(props)
+
+    this.render = this.render.bind(this);
+  }
 
   render(){
     return(
       <div>
-        <Header/>
+        <Header appRender = {this.render}/>
         {this.props.children}
         <Footer/>
       </div>

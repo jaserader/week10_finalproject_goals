@@ -1,0 +1,345 @@
+////////////////////////////////////////////////////////////////////////////////
+// HOME PAGE
+////////////////////////////////////////////////////////////////////////////////
+
+#homepage{
+
+  aside{
+    @include span-columns(3);
+    margin-top: 10px;
+
+    #userInfo{
+      @include span-columns(11.5);
+      @include shift(.85);
+      background: #F78883;
+      // border: #A0A0A0 2px solid;
+      border-radius: 5px;
+      box-shadow: 4px 4px #A9AEBD;
+      margin-bottom: 5px;
+
+      #userAvatar{
+          @include span-columns(6);
+          margin-top: 5%;
+          height: 150px;
+          background: gray url("../../assets/man.jpg") no-repeat -335px -92px;
+          border-radius: 50%;
+          border: #fff 4px solid;
+          top: 500px;
+
+          &:first-of-type{
+            @include shift(1.5);
+          }
+        }
+
+      span{
+        @include span-columns(10);
+        @include shift(2);
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: lighter;
+        color: #3878D7;
+
+        &:first-of-type{
+          margin-top: 12px;
+        }
+      }
+    }
+
+    #friendsList{
+      @include span-columns(11.5);
+      @include shift(.85);
+      height: 400px;
+      background: #F3F3F3;
+      margin-top: 8px;
+      border-radius: 5px;
+      box-shadow: 4px 4px #A9AEBD;
+
+      span{
+        @include span-columns(12);
+        background: #3878D7;
+        height: 50px;
+        padding: 15px 0 0 40px;
+        font-size: 20px;
+        font-weight: lighter;
+        border-bottom: #fff 3px solid;
+        border-radius: 5px;
+        color: #fff;
+      }
+
+      #followingList{
+        @include span-columns(12);
+        margin: 0;
+
+        a{
+          @include span-columns(10);
+          @include shift(1);
+          text-decoration: none;
+          color: gray;
+          font-weight: lighter;
+          font-size: 18px;
+          margin-top: 5px;
+
+          &:hover{
+            color: red;
+          }
+        }
+      }
+    }
+  }
+
+  #goalsListBox{
+    @include span-columns(8.7);
+    margin-top: 10px;
+    height: 657px;
+    background: #F3F3F3;
+    // border: #A0A0A0 2px solid;
+    border-radius: 8px;
+    box-shadow: 4px 4px #A9AEBD;
+
+    #goalsLabel{
+      @include span-columns(11);
+      @include shift(.5);
+      margin-top: 20px;
+      padding: 5px 0 5px 15px;
+      font-size: 30px;
+      font-weight: lighter;
+      background: #3878D7;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 4px 4px #A9AEBD;
+
+    }
+
+    #goalsNav{
+      @include span-columns(12);
+      height: 30px;
+      padding-top: 12px;
+
+      a{
+        @include span-columns(1.6);
+        border-right: gray 1px solid;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: lighter;
+        color: gray;
+
+        &:first-of-type{
+          @include span-columns(1.15);
+          @include shift(4);
+        }
+
+        &:last-of-type{
+          @include span-columns(3);
+          border: none;
+        }
+
+        &:hover{
+          color: red;
+        }
+      }
+
+    }
+
+    #goal{
+      @include span-columns(11);
+      @include shift(.5);
+      height: 100px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 4px 4px #A9AEBD;
+      background: #6FA9FC;
+      position: relative;
+
+      #completedBox{
+        @include span-columns(1);
+        padding: 35px 0 0 26px;
+        height: 100px;
+
+
+        button{
+          width: 25px;
+          height: 25px;
+          background: #fff;
+          border: none;
+          border-radius: 50%;
+
+          &:hover{
+            background: red;
+          }
+        }
+      }
+
+      #goalTxt{
+        @include span-columns(10.5);
+        height: 40px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: none;
+      }
+
+      .votes{
+        @include span-columns(.6);
+        margin-top: 15px;
+        color: #fff;
+        font-weight: lighter;
+        font-size: 18px;
+
+        &:first-of-type{
+          margin-right: 25px;
+        }
+      }
+
+      .voteBtn{
+        @include span-columns(.6);
+        height: 30px;
+        background: #B71C2D;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 20px;
+        margin-top: 8px;
+
+        &:first-of-type{
+          @include shift(1);
+          margin-right: 2px;
+        }
+
+        &:hover{
+          background: #F7263C;
+        }
+      }
+
+      a{
+        @include span-columns(1);
+        @include shift(6.7);
+        @include omega(n);
+
+        i{
+          @include span-columns(12);
+          color: #B71C2D;
+          height: 30px;
+          font-size: 30px;
+
+          &:hover{
+            color: #F7263C;
+          }
+        }
+      }
+    }
+
+    #goalExpanded{
+      @include span-columns(11);
+      @include shift(.5);
+      height: 300px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 4px 4px #A9AEBD;
+      background: #6FA9FC;
+      position: relative;
+
+      #completedBox{
+        @include span-columns(1);
+        padding: 35px 0 0 26px;
+        height: 100px;
+
+
+        button{
+          width: 25px;
+          height: 25px;
+          background: #fff;
+          border: none;
+          border-radius: 50%;
+
+          &:hover{
+            background: red;
+          }
+        }
+      }
+
+      #goalTxt{
+        @include span-columns(10.5);
+        height: 40px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: none;
+      }
+
+      .votes{
+        @include span-columns(.6);
+        margin-top: 15px;
+        color: #fff;
+        font-weight: lighter;
+        font-size: 18px;
+
+        &:first-of-type{
+          margin-right: 25px;
+        }
+      }
+
+      .voteBtn{
+        @include span-columns(.6);
+        height: 30px;
+        background: #B71C2D;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 20px;
+        margin-top: 10px;
+
+        &:first-of-type{
+          @include shift(1);
+          margin-right: 2px;
+        }
+
+        &:hover{
+          background: #F7263C;
+        }
+      }
+
+      a{
+        @include span-columns(1);
+        @include shift(6.7);
+        @include omega(n);
+        i{
+          @include span-columns(12);
+          color: #B71C2D;
+          height: 30px;
+          font-size: 30px;
+
+          &:hover{
+            color: #F7263C;
+          }
+        }
+      }
+
+      #commentSection{
+        @include span-columns(12);
+        border-top: #5987C9 3px solid;
+        border-radius: 5px;
+        height: 200px;
+
+        span{
+          @include span-columns(11);
+          @include shift(.5);
+          font-size: 18px;
+          margin-top: 5px;
+          color: #fff;
+          font-weight: lighter;
+        }
+
+        input{
+          @include span-columns(10.5);
+          @include shift(1);
+          height: 25px;
+          margin-top: 10px;
+          border-radius: 5px;
+          border: none;
+          padding-left: 5px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
