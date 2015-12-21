@@ -23,6 +23,8 @@ class Signinpage extends React.Component {
     }
 
     let done = (error, response) => {
+      console.log(response);
+
       if (error){
         alert("Login Failed!")
         return error;

@@ -51,6 +51,11 @@ class User{
 
     $.ajax(options).then(response => {
       this.token = response.access_token;
+      $.ajaxSetup({
+        headers: {
+          "Authorization": "Bearer " + this.token
+         }
+       });
       this.dispatch();
       done(null, response);
     }).fail(error => {
@@ -58,8 +63,22 @@ class User{
     });
   }
 
+  getProfile(){
+    let profile;
+    $.ajax('https://goals-api.herokuapp.com/me').then(response => {
+      profile = response;
+    });
+
+    return profile;
+  }
+
   logout(){
     this.token = null;
+    $.ajaxSetup({
+      headers: {
+        "Authorization": "Bearer " + this.token
+       }
+     });
   }
 
 };
