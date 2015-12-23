@@ -3,6 +3,7 @@ import $ from 'jquery';
 class User{
   constructor(props){
     this.token = null;
+    this.id = null;
     this.listeners = [];
   }
 
@@ -63,17 +64,9 @@ class User{
     });
   }
 
-  getProfile(){
-    let profile;
-    $.ajax('https://goals-api.herokuapp.com/me').then(response => {
-      profile = response;
-    });
-
-    return profile;
-  }
-
   logout(){
     this.token = null;
+    this.id = null;
     $.ajaxSetup({
       headers: {
         "Authorization": "Bearer " + this.token
