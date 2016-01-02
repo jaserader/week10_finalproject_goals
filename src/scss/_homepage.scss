@@ -3,7 +3,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #homepage{
+  height: 100%;
 
+  &::after {
+    display: block;
+    clear: none;
+    content: "";
+  }
   aside{
     @include span-columns(3);
     margin-top: 10px;
@@ -21,7 +27,6 @@
           @include span-columns(6);
           margin-top: 5%;
           height: 150px;
-          background: gray url("../../assets/man.jpg") no-repeat -335px -92px;
           border-radius: 50%;
           border: #fff 4px solid;
           top: 500px;
@@ -31,17 +36,14 @@
           }
         }
 
-      span{
+      .nameBlock{
         @include span-columns(10);
         @include shift(2);
+        margin-top: 12px;
         margin-bottom: 10px;
         font-size: 20px;
         font-weight: lighter;
-        color: #3878D7;
-
-        &:first-of-type{
-          margin-top: 12px;
-        }
+        color: #fff;
       }
     }
 
@@ -342,4 +344,30 @@
       }
     }
   }
+}
+
+
+@media (max-width: 768px) and (min-width: 480px) {
+  #homepage{
+
+    aside{
+      @include span-columns(12);
+      height: 170px;
+
+      #userInfo{
+        margin-left: 15px;
+
+        #userAvatar{
+          width: 150px;
+        }
+
+        span{
+
+        }
+      }
+    }
+
+  }
+
+
 }

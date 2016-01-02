@@ -38,7 +38,7 @@ class Signuppage extends React.Component {
       if (error){
         return error;
       }
-      console.log(response);
+      
       this.props.history.pushState(null, "signin")
     }
 

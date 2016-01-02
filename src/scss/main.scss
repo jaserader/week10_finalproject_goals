@@ -12,8 +12,16 @@
   font-family: sans-serif;
 }
 
+html {
+  height: 100%;
+}
 body{
+  height: 100%;
   @include outer-container(100%);
+}
+
+.appContainer, #app {
+  height: 100%;
 }
 
 header{

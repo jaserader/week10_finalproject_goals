@@ -3,6 +3,7 @@ import $ from 'jquery';
 class User{
   constructor(props){
     this.token = null;
+    this.id = null;
     this.listeners = [];
   }
 
@@ -51,6 +52,11 @@ class User{
 
     $.ajax(options).then(response => {
       this.token = response.access_token;
+      $.ajaxSetup({
+        headers: {
+          "Authorization": "Bearer " + this.token
+         }
+       });
       this.dispatch();
       done(null, response);
     }).fail(error => {
@@ -60,6 +66,12 @@ class User{
 
   logout(){
     this.token = null;
+    this.id = null;
+    $.ajaxSetup({
+      headers: {
+        "Authorization": "Bearer " + this.token
+       }
+     });
   }
 
 };
