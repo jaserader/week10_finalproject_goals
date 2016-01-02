@@ -64,14 +64,6 @@ class User{
     });
   }
 
-  getProfile(){
-    let profile;
-    $.ajax('https://goals-api.herokuapp.com/me').then(response => {
-      profile = response;
-    });
-
-    return profile;
-  }
   logout(){
     this.token = null;
     this.id = null;
