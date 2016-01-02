@@ -20,12 +20,8 @@ class Header extends React.Component{
     this.unsubscribe();
   }
 
-  handleLogout(e){
-    e.preventDefault();
-
+  handleLogout(){
     User.logout();
-
-    this.props.history.pushState(null, "/")
   }
 
   render(){
@@ -34,7 +30,7 @@ class Header extends React.Component{
 
     if (User.token) {
       home = (<Link id="logo" to="home"><i className="fa fa-list-ul"></i><span>GOALS</span></Link>)
-      logout = (<Link to="" onClick={this.handleLogout}>logout</Link>)
+      logout = (<Link to="signin" onClick={this.handleLogout}>logout</Link>)
     }
 
     return(

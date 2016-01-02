@@ -326,7 +326,7 @@ footer{
   }
 }
 
-@media (max-width: 768px) and (min-width: 480px) {
+@media (max-width: 768px) {
 
   .checkSize {
     padding-top: 1px;
@@ -457,6 +457,26 @@ footer{
       &:first-of-type{
         @include shift(3.5);
       }
+      }
+    }
+  }
+}
+
+@media (max-width: 414px) {
+
+  #splashpage {
+
+    #hero {
+      span {
+        font-size: 24px;
+
+        &#textTop {
+          @include shift(3);
+        }
+
+        &#textBottom {
+          @include shift(3);
+        }
       }
     }
   }
