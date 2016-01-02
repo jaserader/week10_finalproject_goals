@@ -1,9 +1,33 @@
 import React from 'react';
 import {Link} from "react-router";
+import $ from 'jquery';
+
+import User from "../Models/user";
 
 class Homepage extends React.Component {
-  
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      user: {}
+    };
+  }
+
+  componentDidMount(){
+    $.ajax('https://goals-api.herokuapp.com/me').then(response => {
+      this.setState({
+        user: response
+      });
+    });
+  }
+
   render () {
+    let name = (
+            <div className="nameBlock">
+              <span>Name: {this.state.user.first} {this.state.user.last} </span>
+              <span>Username: {this.state.user.username}</span>
+            </div>
+          );
     return (
       <div id="homepage">
 
@@ -11,9 +35,7 @@ class Homepage extends React.Component {
           <section id="userInfo">
 
             <div id="userAvatar"></div>
-
-            <span>Name: Timothy Gass</span>
-            <span>Username: timgass25</span>
+            {name}
 
           </section>
 
