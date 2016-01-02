@@ -1,0 +1,61 @@
+////////////////////////////////////////////////////////////////////////////////
+// SIGN IN PAGE
+////////////////////////////////////////////////////////////////////////////////
+
+#signinPage{
+  color: #3878D7;
+  font-weight: lighter;
+  font-size: 20px;
+  height: 600px;
+
+#signinForm{
+  padding-top: 150px;
+
+  label{
+    @include span-columns(4);
+    @include shift(4);
+    margin-bottom: 5px;
+
+    &:first-of-type{
+      margin-top: 40px;
+    }
+  }
+
+  input{
+    @include span-columns(4);
+    @include shift(4);
+    margin-bottom: 5px;
+    border: #A0A0A0 1px solid;
+    border-radius: 3px;
+    color: gray;
+
+    &:focus{
+      height: 32px;
+    }
+
+    &:last-of-type{
+      height: 32px;
+      margin-top: 5px;
+      color: #fff;
+      border: none;
+      background: #F7263C;
+
+        &:hover{
+          background: #B71C2D;
+        }
+
+      }
+    }
+  }
+
+  a{
+    @include span-columns(4);
+    @include shift(7);
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+}

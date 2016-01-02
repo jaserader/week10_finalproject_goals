@@ -1,18 +1,77 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import {Link} from "react-router";
+import $ from 'jquery';
+
+import User from "../Models/user";
+import Goal from "../Models/goal";
 
 class Homepage extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      user: {}
+    };
+
+    this.handleEnter = this.handleEnter.bind(this);
+    this.handlePostGoal = this.handlePostGoal.bind(this);
+  }
+
+  handleEnter(e){
+    if(e.which === 13){
+      return true;
+    }
+
+    return false;
+  }
+
+  handlePostGoal(e){
+
+    if(this.handleEnter(e)){
+      let done = (error, response) => {
+        console.log(response);
+
+        if (error){
+          alert("Post Failed!")
+          return error;
+        }
+      }
+
+      Goal.post(
+        {
+          "body": $('#goalTxt').val()
+          },
+        done
+      )
+    }
+  }
+
+  componentDidMount(){
+    $.ajax('https://goals-api.herokuapp.com/me').then(response => {
+      User.id = response.id;
+      this.setState({
+        user: response
+      });
+      let url = $.ajax('https://goals-api.herokuapp.com/users/${User.id}/goals').then(response => {
+        console.log(response);
+      });
+    });
+  }
+
   render () {
+
     return (
       <div id="homepage">
 
         <aside>
           <section id="userInfo">
 
-            <div id="userAvatar"></div>
+            <img src="http://www.gravatar.com/avatar/?d=identicon"  id="userAvatar"></img>
 
-            <span>Name: Timothy Gass</span>
-            <span>Username: timgass25</span>
+              <div className="nameBlock">
+                <span>Name: {this.state.user.first} {this.state.user.last} </span>
+                <span>Username: {this.state.user.username}</span>
+              </div>
 
           </section>
 
@@ -48,7 +107,7 @@ class Homepage extends React.Component {
           <div id="goal">
             <div id="completedBox"><button id="completed"></button></div>
 
-            <input id="goalTxt"></input>
+            <input id="goalTxt" onKeyDown={this.handlePostGoal} ></input>
 
             <button className="voteBtn">+</button>
             <button className="voteBtn">-</button>
@@ -86,6 +145,8 @@ class Homepage extends React.Component {
         </section>
 
       </div>
+
+
     )
   }
 }
