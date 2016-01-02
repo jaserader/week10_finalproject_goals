@@ -28,6 +28,7 @@ class Homepage extends React.Component {
               <span>Username: {this.state.user.username}</span>
             </div>
           );
+
     return (
       <div id="homepage">
 
