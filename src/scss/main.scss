@@ -1,30 +1,49 @@
 @import "../../dist/bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../../dist/bower_components/neat/app/assets/stylesheets/neat";
+@import "../../dist/bower_components/normalize-css/normalize";
+
+@import "signinpage";
+@import "signuppage";
+@import "homepage";
+
 
 *{
   box-sizing: border-box;
   font-family: sans-serif;
 }
 
+html {
+  height: 100%;
+}
 body{
+  height: 100%;
   @include outer-container(100%);
 }
 
+.appContainer, #app {
+  height: 100%;
+}
+
 header{
-  height: 70px;
+  @include span-columns(12);
+  height: 60px;
   padding: 12px 0 0 0;
+  border-bottom: #F3F3F3 3px solid;
 
 
   #logo {
-    margin: 40px 0 0 40px;
+    @include span-columns(4);
+    @include shift(.5);
     font-weight: lighter;
     letter-spacing: .5px;
     text-decoration: none;
-    color: #5F95E3;
+    color: #3878D7;
 
     i {
-      margin-right: 7px;
-      font-size: 42px;
+      @include span-columns(1);
+      margin-right: 13px;
+      margin-top: 2px;
+      font-size: 38px;
     }
 
     span{
@@ -33,29 +52,440 @@ header{
       font-size: 36px;
     }
   }
+
+  #headerNav{
+    @include span-columns(3);
+    @include shift(4.5);
+    margin-top: 8px;
+
+    input{
+      @include span-columns(8);
+      height: 25px;
+      font-size: 15px;
+      font-weight: lighter;
+      border-radius: 3px;
+      border: #A9AEBD 1px solid;
+      padding-left: 5px;
+    }
+
+    a{
+      @include span-columns(1.85);
+      @include shift(.3);
+      text-decoration: none;
+      color: #000;
+      height: 25px;
+      padding-top: 5px;
+      font-weight: lighter;
+
+      &:hover{
+        color: #5D76D4;
+        border-bottom: red 2px solid;
+      }
+    }
+  }
 }
 
-#homepage{
+#splashpage{
   @include span-columns(12) ;
 
   #homeNav {
-    background-color: #E1E3E4;
+    background-color: #F3F3F3;
     height: 30px;
     padding: 7px 0 0 0;
 
     span{
-      @include shift(.2);
+      @include shift(.5);
+      @include span-columns(4);
+      font-weight: lighter;
     }
 
     a{
-      @include shift(8.4);
+      @include shift(6.42);
       text-decoration: none;
       color: #000;
       margin-right: 15px;
+      height: 30px;
+      font-weight: lighter;
 
       &:hover{
         color: #5D76D4;
+        border-bottom: red 2px solid;
+        }
+      }
+    }
+  }
+
+  #hero{
+    @include span-columns(12);
+    background: gray url("../../assets/goalHero.jpg") no-repeat fixed center;
+    height: 450px;
+    position: relative;
+    color: #fff;
+    font-weight: lighter;
+
+
+      #signupBtn{
+        @include span-columns(1.4);
+        @include shift(7.3);
+        font-size: 20px;
+        font-weight: lighter;
+        color: #fff;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        background: #F7263C;
+        position: absolute;
+        top: 195px;
+        left: 15px;
+        text-decoration: none;
+        text-align: center;
+        padding-top: .6%;
+
+        &:hover{
+          background: #B71C2D;
+        }
+      }
+
+      #textTop{
+        @include span-columns(5);
+        margin-left: 50%;
+        margin-top: 70px;
+        font-size: 2.6vw;
+      }
+
+      #textBottom{
+        @include span-columns(5);
+        margin-left: 53%;
+        font-size: 2.5vw;
+        margin-top: 15px;
+      }
+  }
+
+  #goalsInfo{
+    height: 500px;
+  }
+
+#customerPicture{
+  @include span-columns(2);
+  margin-top: 5%;
+  height: 200px;
+  background: gray url("../../assets/man.jpg") no-repeat -292px -73px;
+  border-radius: 50%;
+  top: 500px;
+
+  &:first-of-type{
+    @include shift(3);
+  }
+}
+
+#customerQuote{
+  @include span-columns(2);
+  height: 200px;
+  background: #fff;
+  margin-top: 60px;
+  font-weight: lighter;
+  color: gray;
+  padding: 7px;
+
+  &:first-of-type{
+    @include shift(3);
+  }
+}
+
+footer{
+  @include span-columns(12);
+  height: 250px;
+  background: #A0A0A0;
+  margin-top: 40px;
+
+  #logo {
+    @include span-columns(4);
+    @include shift(.5);
+    margin-top: 20px;
+    font-weight: lighter;
+    letter-spacing: .5px;
+    text-decoration: none;
+    color: #FFF;
+
+    i {
+      @include span-columns(1);
+      margin-right: 13px;
+      margin-top: 2px;
+      font-size: 38px;
+    }
+
+    span{
+      font-family: 'Armata', sans-serif;
+      font-weight: normal;
+      font-size: 36px;
+    }
+  }
+
+  #socialNav{
+    @include span-columns(2);
+    @include shift(5.2);
+    margin-top: 30px;
+
+    a{
+      @include span-columns(2);
+
+      i{
+        @include span-columns(10);
+        font-size: 30px;
+        color: #fff;
+
+        &:hover{
+          color: #5F95E3;
+          border-bottom: red 2px solid;
+        }
+      }
+    }
+  }
+
+  #footerNav1{
+    @include span-columns(12);
+    margin-top: 20px;
+      a{
+        @include span-columns(2);
+        text-decoration: none;
+        color: #fff;
+        font-weight: lighter;
+        font-size: 20px;
+
+        &:first-of-type{
+          @include shift(4.4);
+        }
+
+        &:hover{
+          color: red;
+          text-decoration: underline;
+        }
+      }
+  }
+
+  #footerNav2{
+    @include span-columns(12);
+    margin-top: 5px;
+      a{
+        @include span-columns(2);
+        text-decoration: none;
+        color: #fff;
+        font-weight: lighter;
+        font-size: 20px;
+
+        &:first-of-type{
+          @include shift(4.4);
+        }
+
+        &:hover{
+          color: #5F95E3;
+          text-decoration: underline;
+        }
+      }
+  }
+
+  #footerNav3{
+    @include span-columns(12);
+    margin-top: 5px;
+      a{
+        @include span-columns(2);
+        text-decoration: none;
+        color: #fff;
+        font-weight: lighter;
+        font-size: 20px;
+
+        &:first-of-type{
+          @include shift(4.4);
+        }
+
+        &:hover{
+          color: red;
+          text-decoration: underline;
+        }
+      }
+  }
+
+  #footerNav4{
+    @include span-columns(12);
+    margin-top: 5px;
+
+      a{
+        @include span-columns(2);
+        text-decoration: none;
+        color: #fff;
+        font-weight: lighter;
+        font-size: 20px;
+
+        &:first-of-type{
+          @include shift(4.4);
+        }
+
+        &:hover{
+          text-decoration: underline;
+          color: #5F95E3;
+        }
+      }
+  }
+}
+
+@media (min-width:769px) {
+  .checkSize {
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .checkSize {
+    padding-top: 1px;
+  }
+
+  a#logo {
+    @include span-columns(7);
+  }
+
+  header{
+    #headerNav{
+      @include span-columns(3);
+      @include shift(1.38);
+      a{
+        @include span-columns(3.3)
+      }
+    }
+  }
+
+  #splashpage{
+    #homeNav{
+
+      span{
+        @include shift(.5);
+        @include span-columns(6);
+        font-weight: lighter;
+      }
+
+      a{
+        @include span-columns(1.1);
+        @include shift(4.305);
+        @include omega(n);
+        height: 20px;
+      }
+    }
+    #hero {
+      background-position: center relative;
+
+      span{
+        font-size: 28px;
+
+        &#textTop {
+          @include shift(5.5);
+          @include span-columns(6.5);
+          @include omega(n);
+        }
+
+        &#textBottom {
+          @include shift(6.5);
+          @include span-columns(5.5);
+          @include omega(n);
+        }
+
+      }
+
+      a{
+        @include span-columns(2);
+        padding-top: 1.1%;
+      }
+    }
+  }
+
+  div#customerPicture{
+    @include shift(.5);
+    height: 180px;
+    @include span-columns(3.0242);
+    background-position: -330px -100px;
+
+    &:first-of-type{
+      @include shift(1);
+    }
+  }
+
+  div#customerQuote{
+    @include shift(.5);
+    @include span-columns(3);
+    height: 270px;
+
+    &:first-of-type{
+      @include shift(1);
+    }
+  }
+
+  footer {
+    #socialNav {
+      @include shift(2);
+
+      a{
+        @include span-columns(3.3);
+      }
+    }
+
+    #footerNav1{
+      a {
+        @include span-columns(3);
+
+        &:first-of-type{
+          @include shift(3.5);
+        }
+      }
+    }
+
+    #footerNav2{
+      a {
+        @include span-columns(3);
+
+
+        &:first-of-type{
+          @include shift(3.5);
+        }
+      }
+    }
+
+    #footerNav3{
+      a {
+        @include span-columns(3);
+
+        &:first-of-type{
+          @include shift(3.5);
+        }
+      }
+    }
+
+    #footerNav4{
+    a {
+      @include span-columns(3);
+
+      &:first-of-type{
+        @include shift(3.5);
       }
       }
     }
   }
+}
+
+@media (max-width: 414px) {
+
+  #splashpage {
+
+    #hero {
+      span {
+        font-size: 24px;
+
+        &#textTop {
+          @include shift(3);
+        }
+
+        &#textBottom {
+          @include shift(3);
+        }
+      }
+    }
+  }
+}
