@@ -355,32 +355,32 @@
 
 
       #userInfo{
-        @include span-columns(5.75);
+        @include span-columns(7);
         @include shift(.3);
-        height: 200px;
+        height: 190px;
 
         #userAvatar{
           @include span-columns(4);
-          height: 120px;
+          height: 140px;
           margin-top: 17px;
 
           &:first-of-type{
-            @include shift(.5);
+            @include shift(1.5);
           }
         }
 
         .nameBlock{
-          @include span-columns(4);
-          @include shift(0);
+          @include span-columns(5);
+          @include shift(.7);
           margin-top: 40px;
         }
       }
 
       #friendsList{
-        @include span-columns(5.75);
+        @include span-columns(4.5);
         @include omega(n);
         @include shift(0);
-        height: 200px;
+        height: 190px;
         margin-top: 0px;
       }
     }
@@ -468,19 +468,21 @@
         height: 200px;
 
         #userAvatar{
-          @include span-columns(4);
+          @include span-columns(8);
+          @include omega(n);
           height: 120px;
           margin-top: 17px;
 
           &:first-of-type{
-            @include shift(.5);
+            @include shift(2);
           }
         }
 
         .nameBlock{
-          @include span-columns(4);
-          @include shift(0);
-          margin-top: 40px;
+          @include span-columns(10);
+          @include shift(1);
+          margin-top: 10px;
+          font-size: 15px;
         }
       }
 
@@ -506,7 +508,7 @@
     #goalsListBox{
       @include span-columns(11.5);
       @include shift(.3);
-      height: 540px;
+      height: 680px;
 
       #goalsNav{
         a{

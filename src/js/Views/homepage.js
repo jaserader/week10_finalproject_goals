@@ -154,12 +154,6 @@ class Homepage extends React.Component {
               <Link to="home">Freddy Roberts</Link>
               <Link to="home">Freddy Roberts</Link>
               <Link to="home">Freddy Roberts</Link>
-              <Link to="home">Freddy Roberts</Link>
-              <Link to="home">Freddy Roberts</Link>
-              <Link to="home">Freddy Roberts</Link>
-              <Link to="home">Freddy Roberts</Link>
-              <Link to="home">Freddy Roberts</Link>
-              <Link to="home">Freddy Roberts</Link>
             </ul>
           </section>
         </aside>
