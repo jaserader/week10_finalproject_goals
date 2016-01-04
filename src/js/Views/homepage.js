@@ -99,8 +99,6 @@ class Homepage extends React.Component {
         console.error(error);
       });
     });
-
-    // Goal.postComment("Almost done with it!", 31, (a, b) => { console.log(b);});
   }
 
   render () {
@@ -117,7 +115,6 @@ class Homepage extends React.Component {
                   <div id="completedBox"><button id="completed"></button></div>
 
                   <p>{goal.body}</p>
-                  {comments}
 
                   {children}
                   <button className="voteBtn">+</button>
