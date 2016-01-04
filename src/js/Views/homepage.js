@@ -107,9 +107,9 @@ class Homepage extends React.Component {
         let comments = goal.comments.map((comment) => {
           return (<p key={goal.id}>{comment.username}:{comment.body}</p>);
         });
-        let children = React.Children.map(this.props.children, (child) => {
-          return React.cloneElement(child, {id: goal.id});
-        });
+          let children = React.Children.map(this.props.children, (child) => {
+            return React.cloneElement(child, {id: goal.id});
+          });
         let link = `home/goals/${goal.id}`;
         return (  <div id="goal" key={goal.id} >
                   <div id="completedBox"><button id="completed"></button></div>
