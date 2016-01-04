@@ -162,33 +162,44 @@ header{
   }
 
   #goalsInfo{
+    @include span-columns(12);
     height: 500px;
-  }
+    margin-top: 50px;
 
-#customerPicture{
-  @include span-columns(2);
-  margin-top: 5%;
-  height: 200px;
-  background: gray url("../../assets/man.jpg") no-repeat -292px -73px;
-  border-radius: 50%;
-  top: 500px;
+  #customerContainer{
+    @include span-columns(3);
+    @include omega(n);
+    height: 450px;
 
-  &:first-of-type{
-    @include shift(3);
-  }
-}
+    &:first-of-type{
+      @include shift(2);
+    }
 
-#customerQuote{
-  @include span-columns(2);
-  height: 200px;
-  background: #fff;
-  margin-top: 60px;
-  font-weight: lighter;
-  color: gray;
-  padding: 7px;
+    #customerPicture{
+      @include span-columns(9);
+      @include omega(n);
+      margin-top: 5%;
+      height: 250px;
+      background: gray url("../../assets/man.jpg") no-repeat -292px -73px;
+      border-radius: 50%;
+      top: 500px;
+    }
 
-  &:first-of-type{
-    @include shift(3);
+    #customerQuote{
+      @include span-columns(10);
+      @include omega(n);
+      height: 200px;
+      background: #fff;
+      margin-top: 20px;
+      font-weight: lighter;
+      color: gray;
+      padding: 7px;
+      text-align: center;
+
+      &:first-of-type{
+        @include shift(3);
+      }
+    }
   }
 }
 
@@ -196,7 +207,7 @@ footer{
   @include span-columns(12);
   height: 250px;
   background: #A0A0A0;
-  margin-top: 40px;
+  margin-top: 30px;
 
   #logo {
     @include span-columns(4);
@@ -372,6 +383,7 @@ footer{
     }
     #hero {
       background-position: center relative;
+      height: 325px;
 
       span{
         font-size: 28px;
@@ -397,28 +409,30 @@ footer{
     }
   }
 
-  div#customerPicture{
-    @include shift(.5);
-    height: 180px;
-    @include span-columns(3.0242);
-    background-position: -330px -100px;
+#goalsInfo{
+  height: 460px;
+  margin-top: 25px;
+
+  #customerContainer{
+    @include span-columns(3.5);
 
     &:first-of-type{
-      @include shift(1);
+      @include shift(1.4);
+    }
+    #customerPicture{
+      @include span-columns(9);
+      height: 180px;
+    }
+
+    #customerQuote{
+
     }
   }
-
-  div#customerQuote{
-    @include shift(.5);
-    @include span-columns(3);
-    height: 270px;
-
-    &:first-of-type{
-      @include shift(1);
-    }
-  }
+}
 
   footer {
+    margin-top: 10px;
+
     #socialNav {
       @include shift(2);
 
@@ -470,7 +484,7 @@ footer{
   }
 }
 
-@media (max-width: 480px) and (min-width: 300px) {
+@media (max-width: 480px) and (min-width: 280px) {
 
   header{
     height: 50px;
@@ -551,23 +565,31 @@ footer{
   }
 }
 
-#customerPicture{
-  @include span-columns(6);
-  @include shift(3);
-  @include omega(1n);
+#goalsInfo{
+  height: 1100px;
+  margin-top: 25px;
 
-  &:first-of-type{
-    @include shift(3);
-  }
-}
+  #customerContainer{
+    @include span-columns(11);
+    @include shift(1.5);
+    height: 350px;
+    margin-top: 20px;
 
-#customerQuote{
-  @include span-columns(8);
-  @include shift(2.5);
-  margin-top: 5px;
+    &:first-of-type{
+      @include shift(1.5);
+      margin-top: 0;
+    }
 
-  &:first-of-type{
-    @include shift(2.5);
+    #customerPicture{
+      @include span-columns(6.5);
+      @include shift(1.5);
+      height: 180px;
+    }
+
+    #customerQuote{
+      @include span-columns(9.5);
+      @include shift(0);
+    }
   }
 }
 
