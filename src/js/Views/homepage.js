@@ -117,11 +117,6 @@ class Homepage extends React.Component {
                   <p>{goal.body}</p>
 
                   {children}
-                  <button className="voteBtn">+</button>
-                  <button className="voteBtn">-</button>
-
-                  <span className="votes">Votes:</span>
-                  <span className="votes">10</span>
 
                   <Link to={link} onClick={this.commentLink} id={goal.id} key={goal.id}><i className="fa fa-angle-down"></i></Link>
 
@@ -170,40 +165,13 @@ class Homepage extends React.Component {
 
             <input id="goalTxt" onKeyDown={this.handlePostGoal} ></input>
 
-            <button className="voteBtn">+</button>
-            <button className="voteBtn">-</button>
-
-            <span className="votes">Votes:</span>
-            <span className="votes">10</span>
-
             <Link to="/"><i className="fa fa-angle-down"></i></Link>
 
           </div>
 
           {goals}
 
-          <div id="goalExpanded">
-            <div id="completedBox"><button id="completed"></button></div>
 
-            <input id="goalTxt"></input>
-
-            <button className="voteBtn">+</button>
-            <button className="voteBtn">-</button>
-
-            <span className="votes">Votes:</span>
-            <span className="votes">10</span>
-
-            <Link to="/"><i className="fa fa-angle-down"></i></Link>
-
-            <div id="commentSection">
-              <span>Comments:</span>
-              <input id="newComment"  placeholder="New Comment...."></input>
-              <input id="existingComment"></input>
-              <input id="existingComment"></input>
-              <input id="existingComment"></input>
-            </div>
-
-          </div>
         </section>
 
       </div>
