@@ -99,8 +99,6 @@ class Homepage extends React.Component {
         console.error(error);
       });
     });
-
-    // Goal.postComment("Almost done with it!", 31, (a, b) => { console.log(b);});
   }
 
   render () {
@@ -129,7 +127,7 @@ class Homepage extends React.Component {
 
                 </div>);
       })
-      
+
       return (
         <div id="homepage">
 
