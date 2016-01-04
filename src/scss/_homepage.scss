@@ -145,13 +145,64 @@
     #goal{
       @include span-columns(11);
       @include shift(.5);
-      height: 100px;
+      height: 150px;
       margin-top: 10px;
       border: none;
       border-radius: 5px;
       box-shadow: 4px 4px #A9AEBD;
       background: #6FA9FC;
       position: relative;
+
+      p{
+        @include span-columns(10);
+        padding: 5px 0 0 5px;
+        border-radius: 5px;
+        background: #3878D7;
+      }
+
+      #commentSection{
+        @include span-columns(12);
+        margin-top: 0;
+        height: 150px;
+        border-radius: 5px;
+        box-shadow: 4px 4px #A9AEBD;
+        background: #6FA9FC;
+
+
+        li{
+          @include span-columns(11);
+          @include shift(1);
+          list-style: none;
+
+          p{
+            @include span-columns(11);
+            padding: 5px 0 0 5px;
+            border-radius: 5px;
+            background: #3878D7;
+            color: #fff;
+            margin-top: 5px;
+            margin-bottom: 0;
+          }
+        }
+
+        #commentContainer{
+          @include span-columns(12);
+
+          input{
+            @include span-columns(10);
+            @include shift(1);
+            border-radius: 5px;
+            border: none;
+            height: 25px;
+          }
+
+          span{
+            @include shift(.5);
+            margin-top: 10px;
+          }
+        }
+      }
+
 
       #completedBox{
         @include span-columns(1);
