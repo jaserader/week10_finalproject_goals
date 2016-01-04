@@ -1,10 +1,12 @@
 import $ from 'jquery';
+import React from 'react';
 
 class User{
   constructor(props){
     this.token = null;
     this.id = null;
     this.listeners = [];
+    this.goals = [];
   }
 
   subscribe(callback) {

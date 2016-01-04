@@ -352,21 +352,238 @@
 
     aside{
       @include span-columns(12);
-      height: 170px;
+
 
       #userInfo{
-        margin-left: 15px;
+        @include span-columns(5.75);
+        @include shift(.3);
+        height: 200px;
 
         #userAvatar{
-          width: 150px;
+          @include span-columns(4);
+          height: 120px;
+          margin-top: 17px;
+
+          &:first-of-type{
+            @include shift(.5);
+          }
         }
 
-        span{
+        .nameBlock{
+          @include span-columns(4);
+          @include shift(0);
+          margin-top: 40px;
+        }
+      }
 
+      #friendsList{
+        @include span-columns(5.75);
+        @include omega(n);
+        @include shift(0);
+        height: 200px;
+        margin-top: 0px;
+      }
+    }
+
+    #goalsListBox{
+      @include span-columns(11.5);
+      @include shift(.3);
+
+      #goalsNav{
+        a{
+          @include span-columns(2.1)
+
+          &:first-of-type{
+            @include span-columns(1.4);
+            @include shift(3);
+          }
+        }
+      }
+
+      #goal{
+        @include shift(.5);
+
+        #completedBox{
+          padding-left: 15px;
+        }
+
+        .votes{
+          @include span-columns(.8);
+        }
+
+        .voteBtn{
+          @include span-columns(.8);
+        }
+
+        a{
+          @include shift(4.7);
+          margin-top: 20px;
+        }
+      }
+
+      #goalExpanded{
+        @include shift(.5);
+
+        #completedBox{
+          padding-left: 15px;
+        }
+
+        .votes{
+          @include span-columns(.8);
+        }
+
+        .voteBtn{
+          @include span-columns(.8);
+        }
+
+        a{
+          @include shift(4.7);
+          margin-top: 20px;
+        }
+
+        #commentSection{
+
+          input{
+            @include span-columns(11);
+            @include shift(.5);
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+@media (max-width: 480px) and (min-width: 300px) {
+  #homepage{
+
+    aside{
+      @include span-columns(12);
+
+
+      #userInfo{
+        @include span-columns(5.75);
+        @include shift(.3);
+        height: 200px;
+
+        #userAvatar{
+          @include span-columns(4);
+          height: 120px;
+          margin-top: 17px;
+
+          &:first-of-type{
+            @include shift(.5);
+          }
+        }
+
+        .nameBlock{
+          @include span-columns(4);
+          @include shift(0);
+          margin-top: 40px;
+        }
+      }
+
+      #friendsList{
+        @include span-columns(5.75);
+        @include omega(n);
+        @include shift(0);
+        height: 200px;
+        margin-top: 0px;
+
+      #followingList{
+        margin: 0;
+        padding-left: 35px;
+
+          a{
+            @include span-columns(12);
+            @include shift(0);
+          }
         }
       }
     }
 
+    #goalsListBox{
+      @include span-columns(11.5);
+      @include shift(.3);
+      height: 540px;
+
+      #goalsNav{
+        a{
+          @include span-columns(3.3)
+
+          &:first-of-type{
+            @include span-columns(2.1);
+            @include shift(1);
+          }
+
+          &:last-of-type{
+            @include span-columns(5);
+            border: none;
+          }
+        }
+      }
+
+      #goal{
+        @include shift(.5);
+
+        #completedBox{
+          padding-left: 15px;
+        }
+
+        #goalTxt{
+          @include span-columns(9.5);
+          @include shift(1);
+        }
+
+        .votes{
+          @include span-columns(1.2);
+        }
+
+        .voteBtn{
+          @include span-columns(1.2);
+        }
+
+        a{
+          @include shift(2);
+          margin-top: 20px;
+        }
+      }
+
+      #goalExpanded{
+        @include shift(.5);
+
+        #completedBox{
+          padding-left: 15px;
+        }
+
+        #goalTxt{
+          @include span-columns(9.5);
+          @include shift(1);
+        }
+
+        .votes{
+          @include span-columns(1.2);
+        }
+
+        .voteBtn{
+          @include span-columns(1.2);
+        }
+
+        a{
+          @include shift(2);
+          margin-top: 20px;
+        }
+
+        #commentSection{
+
+          input{
+            @include span-columns(11);
+            @include shift(.5);
+          }
+        }
+      }
+    }
   }
 
 

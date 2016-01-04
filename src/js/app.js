@@ -9,7 +9,8 @@ import Homepage from "./Views/homepage";
 import Signinpage from "./Views/signinpage";
 import Footer from "./Views/footer";
 import Notfoundpage from "./Views/notfoundpage";
-import CommentsView from "./Views/commentsview"; 
+import CommentsView from "./Views/commentsview";
+import Goal from "./Models/goal";
 
 class App extends React.Component{
   constructor(props){

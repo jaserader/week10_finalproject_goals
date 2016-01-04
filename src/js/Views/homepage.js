@@ -5,16 +5,19 @@ import $ from 'jquery';
 import User from "../Models/user";
 import Goal from "../Models/goal";
 
+
 class Homepage extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      user: {}
+      user: {},
+      userGoals: []
     };
 
     this.handleEnter = this.handleEnter.bind(this);
     this.handlePostGoal = this.handlePostGoal.bind(this);
+    this.commentLink = this.commentLink.bind(this);
   }
 
   handleEnter(e){
@@ -29,7 +32,22 @@ class Homepage extends React.Component {
 
     if(this.handleEnter(e)){
       let done = (error, response) => {
-        console.log(response);
+        let goal = {
+           body: response.body,
+           comments: response.comments,
+           completed: response.completed,
+           created: response.created_at,
+           id: response.id,
+           upvotes: response.upvotes,
+           user: response.user_id,
+           username: response.username
+        };
+
+        User.goals.push(goal);
+
+        this.setState({
+          userGoals: User.goals
+        });
 
         if (error){
           alert("Post Failed!")
@@ -40,10 +58,18 @@ class Homepage extends React.Component {
       Goal.post(
         {
           "body": $('#goalTxt').val()
-          },
+        },
+
         done
       )
     }
+  }
+
+  commentLink(e){
+    e.preventDefault();
+    Goal.viewGoal(e.target.parentElement.id);
+    let url = `home/goals/${e.target.parentElement.id}`;
+    this.props.history.pushState(null, url);
   }
 
   componentDidMount(){
@@ -52,28 +78,72 @@ class Homepage extends React.Component {
       this.setState({
         user: response
       });
-      let url = $.ajax('https://goals-api.herokuapp.com/users/${User.id}/goals').then(response => {
-        console.log(response);
+        $.ajax(`https://goals-api.herokuapp.com/users/${User.id}/goals`).then(response => {
+          User.goals = response.map(goal =>{
+           return {
+             body: goal.body,
+             comments: goal.comments,
+             completed: goal.completed,
+             created: goal.created_at,
+             id: goal.id,
+             upvotes: goal.upvotes,
+             user: goal.user_id,
+             username: goal.username
+          }
+        });
+
+        this.setState({
+          userGoals: User.goals
+        });
+     }).fail(error => {
+        console.error(error);
       });
     });
+
+    // Goal.postComment("Almost done with it!", 31, (a, b) => { console.log(b);});
   }
 
   render () {
 
-    return (
-      <div id="homepage">
+      let goals = this.state.userGoals.map(goal => {
+        let comments = goal.comments.map((comment) => {
+          return (<p key={goal.id}>{comment.username}:{comment.body}</p>);
+        });
+        let children = React.Children.map(this.props.children, (child) => {
+          return React.cloneElement(child, {id: goal.id});
+        });
+        let link = `home/goals/${goal.id}`;
+        return (  <div id="goal" key={goal.id} >
+                  <div id="completedBox"><button id="completed"></button></div>
 
-        <aside>
-          <section id="userInfo">
+                  <p>{goal.body}</p>
+                  {comments}
 
-            <img src="http://www.gravatar.com/avatar/?d=identicon"  id="userAvatar"></img>
+                  {children}
+                  <button className="voteBtn">+</button>
+                  <button className="voteBtn">-</button>
 
-              <div className="nameBlock">
-                <span>Name: {this.state.user.first} {this.state.user.last} </span>
-                <span>Username: {this.state.user.username}</span>
-              </div>
+                  <span className="votes">Votes:</span>
+                  <span className="votes">10</span>
 
-          </section>
+                  <Link to={link} onClick={this.commentLink} id={goal.id} key={goal.id}><i className="fa fa-angle-down"></i></Link>
+
+                </div>);
+      })
+
+      return (
+        <div id="homepage">
+
+          <aside>
+            <section id="userInfo">
+                <img src="http://www.gravatar.com/avatar/?d=identicon"  id="userAvatar"></img>
+
+               <div className="nameBlock">
+                 <span>Name: {this.state.user.first} {this.state.user.last} </span>
+                 <span>Username: {this.state.user.username}</span>
+               </div>
+
+            </section>
 
           <section id="friendsList">
             <span>Following List:</span>
@@ -119,6 +189,8 @@ class Homepage extends React.Component {
 
           </div>
 
+          {goals}
+
           <div id="goalExpanded">
             <div id="completedBox"><button id="completed"></button></div>
 
@@ -141,7 +213,6 @@ class Homepage extends React.Component {
             </div>
 
           </div>
-          {this.props.children}
         </section>
 
       </div>

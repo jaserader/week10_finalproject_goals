@@ -470,22 +470,180 @@ footer{
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 480px) and (min-width: 300px) {
 
-  #splashpage {
+  header{
+    height: 50px;
+    padding-top: 8px;
 
-    #hero {
-      span {
-        font-size: 24px;
+    #logo{
+      @include span-columns(6);
+      @include omega(n);
 
-        &#textTop {
-          @include shift(3);
-        }
+      i{
+        font-size: 30px;
+      }
 
-        &#textBottom {
-          @include shift(3);
+      span{
+        margin-left: 10px;
+        font-size: 30px;
+      }
+    }
+
+    #headerNav{
+      @include span-columns(4);
+      @include shift(.5);
+      @include omega(n);
+      margin-top: 5px;
+
+      input{
+        @include span-columns(9);
+      }
+
+      a{
+
+        &:hover{
+          border: none;
         }
       }
     }
+  }
+
+#splashpage{
+
+  #homeNav{
+
+    span{
+      display: none;
+    }
+
+    a{
+      @include shift(9.7);
+    }
+  }
+}
+
+#hero{
+  height: 200px;
+
+  #signupBtn{
+    @include span-columns(4);
+    @include shift(7);
+    @include omega(n);
+    top: 105px;
+    padding-top: 7px;
+  }
+
+  #textTop{
+    @include span-columns(12);
+    @include omega(n);
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 25px;
+  }
+
+  #textBottom{
+    @include span-columns(12);
+    @include omega(n);
+    margin-top: 1px;
+    margin-left: 15px;
+    font-size: 25px;
+  }
+}
+
+#customerPicture{
+  @include span-columns(6);
+  @include shift(3);
+  @include omega(1n);
+
+  &:first-of-type{
+    @include shift(3);
+  }
+}
+
+#customerQuote{
+  @include span-columns(8);
+  @include shift(2.5);
+  margin-top: 5px;
+
+  &:first-of-type{
+    @include shift(2.5);
+  }
+}
+
+footer{
+  #logo{
+    @include span-columns(6);
+    @include omega(n);
+
+    i{
+      font-size: 30px;
+    }
+
+    span{
+      margin-left: 10px;
+      font-size: 30px;
+    }
+  }
+
+  #socialNav{
+    @include span-columns(5);
+    @include shift(.5);
+    @include omega(n);
+    margin-top:25px;
+
+    a{
+      @include span-columns(2.1);
+
+      &:first-of-type{
+        @include shift(4.5);
+      }
+    }
+
+    i{
+        @include span-columns(8);
+    }
+  }
+
+  #footerNav1{
+    a{
+      @include span-columns(4);
+
+      &:first-of-type{
+        @include shift(2.5);
+      }
+    }
+  }
+
+  #footerNav2{
+    a{
+      @include span-columns(4);
+
+      &:first-of-type{
+        @include shift(2.5);
+      }
+    }
+  }
+
+  #footerNav3{
+    a{
+      @include span-columns(4);
+
+      &:first-of-type{
+        @include shift(2.5);
+      }
+    }
+  }
+
+  #footerNav4{
+    a{
+      @include span-columns(4);
+
+      &:first-of-type{
+        @include shift(2.5);
+      }
+    }
+  }
+
   }
 }
