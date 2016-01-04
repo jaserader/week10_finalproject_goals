@@ -1,10 +1,17 @@
-import React, { PropTypes } from 'react'
+import React, { PropTypes } from 'react';
+
+import Goal from "../Models/goal";
 
 class CommentsView extends React.Component {
   render () {
-    return (
-    <h1>This is your goal id: {this.props.params.id}</h1>
-    );
+    let comments;
+    if(this.props.id.toString() === this.props.params.id){
+      comments = (<h1>For tonight we'll just display: {this.props.params.id}</h1>);
+    }
+    else {
+      comments = false;
+    }
+    return comments;
   }
 }
 

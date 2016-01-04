@@ -22,7 +22,6 @@ class Header extends React.Component{
 
   handleLogout(){
     User.logout();
-      console.log(User.token);
   }
 
   render(){
