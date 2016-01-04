@@ -117,7 +117,6 @@ class Homepage extends React.Component {
                   <div id="completedBox"><button id="completed"></button></div>
 
                   <p>{goal.body}</p>
-                  {comments}
 
                   {children}
                   <button className="voteBtn">+</button>
@@ -130,7 +129,7 @@ class Homepage extends React.Component {
 
                 </div>);
       })
-
+      
       return (
         <div id="homepage">
 

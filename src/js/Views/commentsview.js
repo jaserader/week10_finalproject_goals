@@ -1,17 +1,41 @@
 import React, { PropTypes } from 'react';
 
-import Goal from "../Models/goal";
+import User from "../Models/user";
 
 class CommentsView extends React.Component {
   render () {
     let comments;
     if(this.props.id.toString() === this.props.params.id){
-      comments = (<h1>For tonight we'll just display: {this.props.params.id}</h1>);
+      let goalArray = User.goals.filter((goal) => {
+        return (goal.id.toString() === this.props.params.id);
+      });
+      let goal = goalArray[0];
+      comments = goal.comments.map((comment) => {
+        return (<li><p>{comment.body}</p></li>);
+      });
+      if(comments.length === 0){
+        comments = (
+          <div id="commentContainer">
+          <span>Comments:</span>
+          <input id="newComment"  placeholder="New Comment...."></input>
+          </div>
+        );
+      }
+      else{
+        comments.unshift((
+          <div id="commentContainer">
+          <span>Comments:</span>
+          <input id="newComment"  placeholder="New Comment...."></input>
+          </div>
+        ));
+      }
     }
     else {
       comments = false;
     }
-    return comments;
+    return (<div id="commentSection">
+      {comments}
+    </div>);
   }
 }
 
