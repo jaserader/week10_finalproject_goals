@@ -132,16 +132,12 @@ class Homepage extends React.Component {
             return React.cloneElement(child, {id: goal.id});
           });
         let link = `home/goals/${goal.id}`;
-        return (  <div id="goal" key={goal.id} >
-                  <div id="completedBox"><button id="completed"></button></div>
-
-                  <p>{goal.body}</p>
-
-                  {children}
-
-                  <Link to={link} onClick={this.commentLink} id={goal.id} key={goal.id}><i className="fa fa-angle-down"></i></Link>
-
-                </div>);
+        return (  <div className="goal" key={goal.id} >
+                    <div id="completedBox"><button id="completed"></button></div>
+                    <p>{goal.body}</p>
+                    <Link to={link} onClick={this.commentLink} id={goal.id} key={goal.id}><i className="fa fa-angle-down"></i></Link>
+                    {children}
+                  </div>);
       })
 
       let users = this.state.users.map((user)=>{
@@ -178,7 +174,7 @@ class Homepage extends React.Component {
 
           <span id="goalsLabel">Goals</span>
 
-          <div id="goal">
+          <div className="goal">
             <div id="completedBox"><button id="completed"></button></div>
 
             <input id="goalTxt" placeholder="New Goal..." onKeyDown={this.handlePostGoal} ></input>
