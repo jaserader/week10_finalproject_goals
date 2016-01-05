@@ -178,6 +178,9 @@ class UserView extends React.Component {
 
       let users = this.state.users.map((user)=>{
         let links = `users/${user.id}`;
+        if(User.id === user.id){
+          return;
+        }
         return(
           <li key={user.id}><Link to={links}>{`${user.first} ${user.last}`}</Link></li>
         );
@@ -198,7 +201,7 @@ class UserView extends React.Component {
             </section>
 
           <section id="friendsList">
-            <span>Following List:</span>
+            <span>Users List:</span>
 
             <ul id="followingList">
             {users}
