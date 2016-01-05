@@ -1,0 +1,1890 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */ }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+#signupPage {
+  color: #3878D7;
+  font-weight: lighter;
+  font-size: 20px;
+  height: 600px; }
+  #signupPage #signupForm label {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-left: 34.11922%;
+    margin-bottom: 5px; }
+    #signupPage #signupForm label:last-child {
+      margin-right: 0; }
+    #signupPage #signupForm label:first-of-type {
+      margin-top: 40px; }
+  #signupPage #signupForm input {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-left: 34.11922%;
+    margin-bottom: 5px;
+    border: #A0A0A0 1px solid;
+    border-radius: 3px;
+    color: gray; }
+    #signupPage #signupForm input:last-child {
+      margin-right: 0; }
+    #signupPage #signupForm input:focus {
+      height: 32px; }
+    #signupPage #signupForm input:last-of-type {
+      height: 32px;
+      margin-top: 5px;
+      color: #fff;
+      border: none;
+      background: #F7263C; }
+      #signupPage #signupForm input:last-of-type:hover {
+        background: #B71C2D; }
+  #signupPage #signupForm .password {
+    font-weight: lighter;
+    font-size: 14px;
+    padding: 5px; }
+  #signupPage a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-left: 59.70863%;
+    text-decoration: none; }
+    #signupPage a:last-child {
+      margin-right: 0; }
+    #signupPage a:hover {
+      text-decoration: underline; }
+
+@media (max-width: 768px) and (min-width: 480px) {
+  #signupPage #signupForm label {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%; }
+    #signupPage #signupForm label:last-child {
+      margin-right: 0; }
+  #signupPage #signupForm input {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%; }
+    #signupPage #signupForm input:last-child {
+      margin-right: 0; }
+  #signupPage a {
+    margin-left: 66.53247%; } }
+
+@media (max-width: 480px) and (min-width: 300px) {
+  #signupPage {
+    height: 500px; }
+    #signupPage #signupForm label {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%;
+      margin-left: 12.79471%; }
+      #signupPage #signupForm label:last-child {
+        margin-right: 0; }
+    #signupPage #signupForm input {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%;
+      margin-left: 12.79471%; }
+      #signupPage #signupForm input:last-child {
+        margin-right: 0; }
+    #signupPage a {
+      margin-left: 72.50334%; } }
+
+#signinPage {
+  color: #3878D7;
+  font-weight: lighter;
+  font-size: 20px;
+  height: 600px; }
+  #signinPage #signinForm {
+    padding-top: 150px; }
+    #signinPage #signinForm label {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      margin-left: 34.11922%;
+      margin-bottom: 5px; }
+      #signinPage #signinForm label:last-child {
+        margin-right: 0; }
+      #signinPage #signinForm label:first-of-type {
+        margin-top: 40px; }
+    #signinPage #signinForm input {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      margin-left: 34.11922%;
+      margin-bottom: 5px;
+      border: #A0A0A0 1px solid;
+      border-radius: 3px;
+      color: gray; }
+      #signinPage #signinForm input:last-child {
+        margin-right: 0; }
+      #signinPage #signinForm input:focus {
+        height: 32px; }
+      #signinPage #signinForm input:last-of-type {
+        height: 32px;
+        margin-top: 5px;
+        color: #fff;
+        border: none;
+        background: #F7263C; }
+        #signinPage #signinForm input:last-of-type:hover {
+          background: #B71C2D; }
+  #signinPage a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-left: 59.70863%;
+    text-decoration: none; }
+    #signinPage a:last-child {
+      margin-right: 0; }
+    #signinPage a:hover {
+      text-decoration: underline; }
+
+@media (max-width: 768px) and (min-width: 480px) {
+  #signinPage #signinForm label {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%; }
+    #signinPage #signinForm label:last-child {
+      margin-right: 0; }
+  #signinPage #signinForm input {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%; }
+    #signinPage #signinForm input:last-child {
+      margin-right: 0; }
+  #signinPage a {
+    margin-left: 64.82651%; } }
+
+@media (max-width: 480px) and (min-width: 300px) {
+  #signinPage {
+    height: 400px; }
+    #signinPage #signinForm label {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%;
+      margin-left: 12.79471%; }
+      #signinPage #signinForm label:last-child {
+        margin-right: 0; }
+      #signinPage #signinForm label:first-of-type {
+        margin-top: 0px; }
+    #signinPage #signinForm input {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%;
+      margin-left: 12.79471%; }
+      #signinPage #signinForm input:last-child {
+        margin-right: 0; }
+    #signinPage a {
+      margin-left: 69.9444%; } }
+
+#homepage {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  height: calc(100vh);
+  position: relative; }
+  #homepage:last-child {
+    margin-right: 0; }
+  #homepage::after {
+    display: block;
+    clear: none;
+    content: ""; }
+  #homepage aside {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    margin-top: 10px;
+    position: absolute; }
+    #homepage aside:last-child {
+      margin-right: 0; }
+    #homepage aside #userInfo {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 95.7351%;
+      margin-left: 7.25033%;
+      background: #F78883;
+      border-radius: 5px;
+      box-shadow: 4px 4px #A9AEBD;
+      margin-bottom: 5px; }
+      #homepage aside #userInfo:last-child {
+        margin-right: 0; }
+      #homepage aside #userInfo #userAvatar {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%;
+        margin-top: 5%;
+        height: 150px;
+        border-radius: 50%;
+        border: #fff 4px solid;
+        top: 500px; }
+        #homepage aside #userInfo #userAvatar:last-child {
+          margin-right: 0; }
+        #homepage aside #userInfo #userAvatar:first-of-type {
+          margin-left: 12.79471%; }
+      #homepage aside #userInfo .nameBlock {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%;
+        margin-left: 17.05961%;
+        margin-top: 12px;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: lighter;
+        color: #fff; }
+        #homepage aside #userInfo .nameBlock:last-child {
+          margin-right: 0; }
+        #homepage aside #userInfo .nameBlock .label {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 82.94039%; }
+          #homepage aside #userInfo .nameBlock .label:last-child {
+            margin-right: 0; }
+    #homepage aside #friendsList {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 95.7351%;
+      margin-left: 7.25033%;
+      height: 410px;
+      background: #F3F3F3;
+      margin-top: 8px;
+      border-radius: 5px;
+      box-shadow: 4px 4px #A9AEBD;
+      overflow: scroll; }
+      #homepage aside #friendsList:last-child {
+        margin-right: 0; }
+      #homepage aside #friendsList span {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%;
+        background: #3878D7;
+        height: 50px;
+        padding: 15px 0 0 40px;
+        font-size: 20px;
+        font-weight: lighter;
+        border-bottom: #fff 3px solid;
+        border-radius: 5px;
+        color: #fff; }
+        #homepage aside #friendsList span:last-child {
+          margin-right: 0; }
+      #homepage aside #friendsList #followingList {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%;
+        margin: 0; }
+        #homepage aside #friendsList #followingList:last-child {
+          margin-right: 0; }
+        #homepage aside #friendsList #followingList li {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 82.94039%;
+          margin-left: 4.2649%;
+          list-style: none; }
+          #homepage aside #friendsList #followingList li:last-child {
+            margin-right: 0; }
+          #homepage aside #friendsList #followingList li a {
+            float: left;
+            display: block;
+            margin-right: 2.35765%;
+            width: 100%;
+            text-decoration: none;
+            color: gray;
+            font-weight: lighter;
+            font-size: 18px;
+            margin-top: 7px; }
+            #homepage aside #friendsList #followingList li a:last-child {
+              margin-right: 0; }
+            #homepage aside #friendsList #followingList li a:hover {
+              color: red; }
+  #homepage #goalsListBox {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 71.85165%;
+    margin-top: 10px;
+    height: 657px;
+    background: #F3F3F3;
+    border-radius: 8px;
+    box-shadow: 4px 4px #A9AEBD;
+    right: 25px;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    position: absolute;
+    overflow: scroll; }
+    #homepage #goalsListBox:last-child {
+      margin-right: 0; }
+    #homepage #goalsListBox #goalsLabel {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 91.4702%;
+      margin-left: 4.2649%;
+      margin-top: 20px;
+      padding: 5px 0 5px 15px;
+      font-size: 30px;
+      font-weight: lighter;
+      background: #3878D7;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 4px 4px #A9AEBD; }
+      #homepage #goalsListBox #goalsLabel:last-child {
+        margin-right: 0; }
+    #homepage #goalsListBox .goal {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 91.4702%;
+      margin-left: 4.2649%;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 4px 4px #A9AEBD;
+      background: #6FA9FC;
+      overflow: visible; }
+      #homepage #goalsListBox .goal:last-child {
+        margin-right: 0; }
+      #homepage #goalsListBox .goal p {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%;
+        padding: 10px 0 10px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        color: #fff;
+        background: #3878D7;
+        margin-bottom: 0;
+        margin-top: 10px; }
+        #homepage #goalsListBox .goal p:last-child {
+          margin-right: 0; }
+      #homepage #goalsListBox .goal .commentSection {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%;
+        display: block;
+        margin-top: -40px;
+        border-radius: 5px;
+        background: #6FA9FC; }
+        #homepage #goalsListBox .goal .commentSection:last-child {
+          margin-right: 0; }
+        #homepage #goalsListBox .goal .commentSection div input {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 82.94039%;
+          margin-left: 8.5298%;
+          border-radius: 5px;
+          border: none;
+          height: 30px;
+          margin-bottom: 5px; }
+          #homepage #goalsListBox .goal .commentSection div input:last-child {
+            margin-right: 0; }
+        #homepage #goalsListBox .goal .commentSection div span {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 82.94039%; }
+          #homepage #goalsListBox .goal .commentSection div span:last-child {
+            margin-right: 0; }
+        #homepage #goalsListBox .goal .commentSection li {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 91.4702%;
+          margin-left: 7.67682%;
+          list-style: none; }
+          #homepage #goalsListBox .goal .commentSection li:last-child {
+            margin-right: 0; }
+          #homepage #goalsListBox .goal .commentSection li h6 {
+            font-size: 14px;
+            font-weight: lighter;
+            color: black;
+            margin-top: 1px;
+            margin-bottom: 1px; }
+          #homepage #goalsListBox .goal .commentSection li p {
+            float: left;
+            display: block;
+            margin-right: 2.35765%;
+            width: 91.4702%;
+            padding: 10px 10px 10px 10px;
+            border-radius: 5px;
+            background: #3878D7;
+            color: #fff;
+            margin-top: 5px;
+            margin-bottom: 0;
+            overflow: visible; }
+            #homepage #goalsListBox .goal .commentSection li p:last-child {
+              margin-right: 0; }
+            #homepage #goalsListBox .goal .commentSection li p:last-of-type {
+              margin-bottom: 10px; }
+        #homepage #goalsListBox .goal .commentSection .commentContainer {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 100%; }
+          #homepage #goalsListBox .goal .commentSection .commentContainer:last-child {
+            margin-right: 0; }
+          #homepage #goalsListBox .goal .commentSection .commentContainer span {
+            margin-left: 4.2649%;
+            margin-top: 10px; }
+      #homepage #goalsListBox .goal #completedBox {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 6.17215%;
+        padding: 35px 0 0 26px;
+        height: 100px; }
+        #homepage #goalsListBox .goal #completedBox:last-child {
+          margin-right: 0; }
+        #homepage #goalsListBox .goal #completedBox button {
+          width: 25px;
+          height: 25px;
+          background: #fff;
+          border: none;
+          border-radius: 50%; }
+          #homepage #goalsListBox .goal #completedBox button:hover {
+            background: red; }
+      #homepage #goalsListBox .goal #goalTxt {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%;
+        height: 40px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: none;
+        padding-left: 5px; }
+        #homepage #goalsListBox .goal #goalTxt:last-child {
+          margin-right: 0; }
+      #homepage #goalsListBox .goal a {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 6.17215%;
+        margin-top: 18px; }
+        #homepage #goalsListBox .goal a:last-child {
+          margin-right: 0; }
+        #homepage #goalsListBox .goal a:nth-child(n) {
+          margin-right: 0; }
+        #homepage #goalsListBox .goal a i {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 100%;
+          color: #B71C2D;
+          height: 30px;
+          font-size: 30px; }
+          #homepage #goalsListBox .goal a i:last-child {
+            margin-right: 0; }
+          #homepage #goalsListBox .goal a i:hover {
+            color: #F7263C; }
+
+@media (max-width: 768px) and (min-width: 481px) {
+  #homepage {
+    height: 900px; }
+    #homepage aside {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      #homepage aside:last-child {
+        margin-right: 0; }
+      #homepage aside #userInfo {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 57.35098%;
+        margin-left: 2.55894%;
+        height: 190px; }
+        #homepage aside #userInfo:last-child {
+          margin-right: 0; }
+        #homepage aside #userInfo #userAvatar {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 31.76157%;
+          height: 140px;
+          margin-top: 17px; }
+          #homepage aside #userInfo #userAvatar:last-child {
+            margin-right: 0; }
+          #homepage aside #userInfo #userAvatar:first-of-type {
+            margin-left: 12.79471%; }
+        #homepage aside #userInfo .nameBlock {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 40.29137%;
+          margin-left: 2.55894%;
+          margin-top: 40px;
+          font-size: 18px; }
+          #homepage aside #userInfo .nameBlock:last-child {
+            margin-right: 0; }
+      #homepage aside #friendsList {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 36.02647%;
+        margin-left: 0%;
+        height: 190px;
+        margin-top: 0px; }
+        #homepage aside #friendsList:last-child {
+          margin-right: 0; }
+        #homepage aside #friendsList:nth-child(n) {
+          margin-right: 0; }
+    #homepage #goalsListBox {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 95.7351%;
+      margin-left: 2.55894%;
+      top: 205px;
+      right: 13px; }
+      #homepage #goalsListBox:last-child {
+        margin-right: 0; }
+      #homepage #goalsListBox #goal {
+        margin-left: 4.2649%; }
+        #homepage #goalsListBox #goal #completedBox {
+          padding-left: 15px; }
+        #homepage #goalsListBox #goal a {
+          margin-left: 83.59208%;
+          margin-top: 20px; } }
+
+@media (max-width: 480px) and (min-width: 300px) {
+  #homepage {
+    height: 900px; }
+    #homepage aside {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      #homepage aside:last-child {
+        margin-right: 0; }
+      #homepage aside #userInfo {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 46.68872%;
+        margin-left: 2.55894%;
+        height: 200px; }
+        #homepage aside #userInfo:last-child {
+          margin-right: 0; }
+        #homepage aside #userInfo #userAvatar {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 65.88078%;
+          height: 120px;
+          margin-top: 17px; }
+          #homepage aside #userInfo #userAvatar:last-child {
+            margin-right: 0; }
+          #homepage aside #userInfo #userAvatar:nth-child(n) {
+            margin-right: 0; }
+          #homepage aside #userInfo #userAvatar:first-of-type {
+            margin-left: 17.05961%; }
+        #homepage aside #userInfo .nameBlock {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 91.4702%;
+          margin-left: 8.5298%;
+          margin-top: 10px;
+          font-size: 14px; }
+          #homepage aside #userInfo .nameBlock:last-child {
+            margin-right: 0; }
+      #homepage aside #friendsList {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 46.68872%;
+        margin-left: 0%;
+        height: 200px;
+        margin-top: 0px; }
+        #homepage aside #friendsList:last-child {
+          margin-right: 0; }
+        #homepage aside #friendsList:nth-child(n) {
+          margin-right: 0; }
+        #homepage aside #friendsList #followingList {
+          margin: 0;
+          padding-left: 35px; }
+          #homepage aside #friendsList #followingList a {
+            float: left;
+            display: block;
+            margin-right: 2.35765%;
+            width: 100%;
+            margin-left: 0%; }
+            #homepage aside #friendsList #followingList a:last-child {
+              margin-right: 0; }
+    #homepage #goalsListBox {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 95.7351%;
+      margin-left: 2.55894%;
+      height: 680px;
+      top: 215px;
+      right: 7px; }
+      #homepage #goalsListBox:last-child {
+        margin-right: 0; }
+      #homepage #goalsListBox .goal {
+        margin-left: 4.2649%; }
+        #homepage #goalsListBox .goal .commentSection {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 100%;
+          display: block;
+          margin-top: -40px;
+          border-radius: 5px;
+          background: #6FA9FC; }
+          #homepage #goalsListBox .goal .commentSection:last-child {
+            margin-right: 0; }
+          #homepage #goalsListBox .goal .commentSection li p {
+            padding: 10px 10px 10px 10px;
+            font-weight: lighter;
+            overflow: visible; }
+        #homepage #goalsListBox .goal #completedBox {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 14.70196%;
+          padding-left: 15px; }
+          #homepage #goalsListBox .goal #completedBox:last-child {
+            margin-right: 0; }
+          #homepage #goalsListBox .goal #completedBox:nth-child(n) {
+            margin-right: 0; }
+        #homepage #goalsListBox .goal p {
+          font-weight: lighter;
+          overflow: visible; }
+        #homepage #goalsListBox .goal #goalTxt {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 81.23443%;
+          margin-left: 0%;
+          font-weight: lighter; }
+          #homepage #goalsListBox .goal #goalTxt:last-child {
+            margin-right: 0; }
+        #homepage #goalsListBox .goal a {
+          margin-left: 81.03314%;
+          margin-top: 20px; } }
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif; }
+
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  body::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.appContainer, #app {
+  height: 100%; }
+
+header {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  height: 60px;
+  padding: 12px 0 0 0;
+  border-bottom: #F3F3F3 3px solid; }
+  header:last-child {
+    margin-right: 0; }
+  header #logo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-left: 4.2649%;
+    font-weight: lighter;
+    letter-spacing: .5px;
+    text-decoration: none;
+    color: #3878D7; }
+    header #logo:last-child {
+      margin-right: 0; }
+    header #logo i {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 6.17215%;
+      margin-right: 13px;
+      margin-top: 2px;
+      font-size: 38px; }
+      header #logo i:last-child {
+        margin-right: 0; }
+    header #logo span {
+      font-family: 'Armata', sans-serif;
+      font-weight: normal;
+      font-size: 36px; }
+  header #headerNav {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    margin-left: 38.38412%;
+    margin-top: 8px; }
+    header #headerNav:last-child {
+      margin-right: 0; }
+    header #headerNav input {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%;
+      height: 25px;
+      font-size: 15px;
+      font-weight: lighter;
+      border-radius: 3px;
+      border: #A9AEBD 1px solid;
+      padding-left: 5px; }
+      header #headerNav input:last-child {
+        margin-right: 0; }
+    header #headerNav a {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 13.42249%;
+      margin-left: 70.79738%;
+      text-decoration: none;
+      color: #000;
+      height: 25px;
+      padding-top: 5px;
+      font-weight: lighter; }
+      header #headerNav a:last-child {
+        margin-right: 0; }
+      header #headerNav a:hover {
+        color: #5D76D4;
+        border-bottom: red 2px solid; }
+
+#splashpage {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  #splashpage:last-child {
+    margin-right: 0; }
+  #splashpage #homeNav {
+    background-color: #F3F3F3;
+    height: 30px;
+    padding: 7px 0 0 0; }
+    #splashpage #homeNav span {
+      margin-left: 4.2649%;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      font-weight: lighter; }
+      #splashpage #homeNav span:last-child {
+        margin-right: 0; }
+    #splashpage #homeNav a {
+      margin-left: 54.76134%;
+      text-decoration: none;
+      color: #000;
+      margin-right: 15px;
+      height: 30px;
+      font-weight: lighter; }
+      #splashpage #homeNav a:hover {
+        color: #5D76D4;
+        border-bottom: red 2px solid; }
+
+#hero {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  background: gray url("../../assets/goalHero.jpg") no-repeat fixed center;
+  height: 450px;
+  position: relative;
+  color: #fff;
+  font-weight: lighter; }
+  #hero:last-child {
+    margin-right: 0; }
+  #hero #signupBtn {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 9.58407%;
+    margin-left: 62.26757%;
+    font-size: 20px;
+    font-weight: lighter;
+    color: #fff;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: #F7263C;
+    position: absolute;
+    top: 195px;
+    left: 15px;
+    text-decoration: none;
+    text-align: center;
+    padding-top: .6%; }
+    #hero #signupBtn:last-child {
+      margin-right: 0; }
+    #hero #signupBtn:hover {
+      background: #B71C2D; }
+  #hero #textTop {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+    margin-left: 50%;
+    margin-top: 70px;
+    font-size: 2.6vw; }
+    #hero #textTop:last-child {
+      margin-right: 0; }
+  #hero #textBottom {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+    margin-left: 53%;
+    font-size: 2.5vw;
+    margin-top: 15px; }
+    #hero #textBottom:last-child {
+      margin-right: 0; }
+
+#goalsInfo {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  height: 500px;
+  margin-top: 50px; }
+  #goalsInfo:last-child {
+    margin-right: 0; }
+  #goalsInfo #customerContainer {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    height: 450px; }
+    #goalsInfo #customerContainer:last-child {
+      margin-right: 0; }
+    #goalsInfo #customerContainer:nth-child(n) {
+      margin-right: 0; }
+    #goalsInfo #customerContainer:first-of-type {
+      margin-left: 17.05961%; }
+    #goalsInfo #customerContainer #customerPicture1 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%;
+      margin-top: 5%;
+      height: 250px;
+      background: gray url("../../assets/tim.jpg") no-repeat 0px 0px;
+      background-size: 250px 250px;
+      border-radius: 50%;
+      top: 500px; }
+      #goalsInfo #customerContainer #customerPicture1:last-child {
+        margin-right: 0; }
+      #goalsInfo #customerContainer #customerPicture1:nth-child(n) {
+        margin-right: 0; }
+    #goalsInfo #customerContainer #customerQuote {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%;
+      height: 200px;
+      background: #fff;
+      margin-top: 20px;
+      font-weight: lighter;
+      color: gray;
+      padding: 7px;
+      text-align: center; }
+      #goalsInfo #customerContainer #customerQuote:last-child {
+        margin-right: 0; }
+      #goalsInfo #customerContainer #customerQuote:nth-child(n) {
+        margin-right: 0; }
+      #goalsInfo #customerContainer #customerQuote:first-of-type {
+        margin-left: 25.58941%; }
+  #goalsInfo #customerContainer {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    height: 450px; }
+    #goalsInfo #customerContainer:last-child {
+      margin-right: 0; }
+    #goalsInfo #customerContainer:nth-child(n) {
+      margin-right: 0; }
+    #goalsInfo #customerContainer:first-of-type {
+      margin-left: 17.05961%; }
+    #goalsInfo #customerContainer #customerPicture2 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%;
+      margin-top: 5%;
+      height: 250px;
+      background: gray url("../../assets/lee.jpg") no-repeat 0px 0px;
+      background-size: 250px 250px;
+      border-radius: 50%;
+      top: 500px; }
+      #goalsInfo #customerContainer #customerPicture2:last-child {
+        margin-right: 0; }
+      #goalsInfo #customerContainer #customerPicture2:nth-child(n) {
+        margin-right: 0; }
+    #goalsInfo #customerContainer #customerQuote {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%;
+      height: 200px;
+      background: #fff;
+      margin-top: 20px;
+      font-weight: lighter;
+      color: gray;
+      padding: 7px;
+      text-align: center; }
+      #goalsInfo #customerContainer #customerQuote:last-child {
+        margin-right: 0; }
+      #goalsInfo #customerContainer #customerQuote:nth-child(n) {
+        margin-right: 0; }
+      #goalsInfo #customerContainer #customerQuote:first-of-type {
+        margin-left: 25.58941%; }
+  #goalsInfo #customerContainer {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    height: 450px; }
+    #goalsInfo #customerContainer:last-child {
+      margin-right: 0; }
+    #goalsInfo #customerContainer:nth-child(n) {
+      margin-right: 0; }
+    #goalsInfo #customerContainer:first-of-type {
+      margin-left: 17.05961%; }
+    #goalsInfo #customerContainer #customerPicture3 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%;
+      margin-top: 5%;
+      height: 250px;
+      background: gray url("../../assets/jase.jpg") no-repeat 0px 0px;
+      background-size: 250px 250px;
+      border-radius: 50%;
+      top: 500px; }
+      #goalsInfo #customerContainer #customerPicture3:last-child {
+        margin-right: 0; }
+      #goalsInfo #customerContainer #customerPicture3:nth-child(n) {
+        margin-right: 0; }
+    #goalsInfo #customerContainer #customerQuote {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%;
+      height: 200px;
+      background: #fff;
+      margin-top: 20px;
+      font-weight: lighter;
+      color: gray;
+      padding: 7px;
+      text-align: center; }
+      #goalsInfo #customerContainer #customerQuote:last-child {
+        margin-right: 0; }
+      #goalsInfo #customerContainer #customerQuote:nth-child(n) {
+        margin-right: 0; }
+      #goalsInfo #customerContainer #customerQuote:first-of-type {
+        margin-left: 25.58941%; }
+
+footer {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  height: 250px;
+  background: #A0A0A0;
+  margin-top: 30px; }
+  footer:last-child {
+    margin-right: 0; }
+  footer #logo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-left: 4.2649%;
+    margin-top: 20px;
+    font-weight: lighter;
+    letter-spacing: .5px;
+    text-decoration: none;
+    color: #FFF; }
+    footer #logo:last-child {
+      margin-right: 0; }
+    footer #logo i {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 6.17215%;
+      margin-right: 13px;
+      margin-top: 2px;
+      font-size: 38px; }
+      footer #logo i:last-child {
+        margin-right: 0; }
+    footer #logo span {
+      font-family: 'Armata', sans-serif;
+      font-weight: normal;
+      font-size: 36px; }
+  footer #socialNav {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+    margin-left: 44.35498%;
+    margin-top: 30px; }
+    footer #socialNav:last-child {
+      margin-right: 0; }
+    footer #socialNav a {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%; }
+      footer #socialNav a:last-child {
+        margin-right: 0; }
+      footer #socialNav a i {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%;
+        font-size: 30px;
+        color: #fff; }
+        footer #socialNav a i:last-child {
+          margin-right: 0; }
+        footer #socialNav a i:hover {
+          color: #5F95E3;
+          border-bottom: red 2px solid; }
+  footer #footerNav1 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-top: 20px; }
+    footer #footerNav1:last-child {
+      margin-right: 0; }
+    footer #footerNav1 a {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%;
+      text-decoration: none;
+      color: #fff;
+      font-weight: lighter;
+      font-size: 20px; }
+      footer #footerNav1 a:last-child {
+        margin-right: 0; }
+      footer #footerNav1 a:first-of-type {
+        margin-left: 37.53114%; }
+      footer #footerNav1 a:hover {
+        color: red;
+        text-decoration: underline; }
+  footer #footerNav2 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-top: 5px; }
+    footer #footerNav2:last-child {
+      margin-right: 0; }
+    footer #footerNav2 a {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%;
+      text-decoration: none;
+      color: #fff;
+      font-weight: lighter;
+      font-size: 20px; }
+      footer #footerNav2 a:last-child {
+        margin-right: 0; }
+      footer #footerNav2 a:first-of-type {
+        margin-left: 37.53114%; }
+      footer #footerNav2 a:hover {
+        color: #5F95E3;
+        text-decoration: underline; }
+  footer #footerNav3 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-top: 5px; }
+    footer #footerNav3:last-child {
+      margin-right: 0; }
+    footer #footerNav3 a {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%;
+      text-decoration: none;
+      color: #fff;
+      font-weight: lighter;
+      font-size: 20px; }
+      footer #footerNav3 a:last-child {
+        margin-right: 0; }
+      footer #footerNav3 a:first-of-type {
+        margin-left: 37.53114%; }
+      footer #footerNav3 a:hover {
+        color: red;
+        text-decoration: underline; }
+  footer #footerNav4 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-top: 5px; }
+    footer #footerNav4:last-child {
+      margin-right: 0; }
+    footer #footerNav4 a {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%;
+      text-decoration: none;
+      color: #fff;
+      font-weight: lighter;
+      font-size: 20px; }
+      footer #footerNav4 a:last-child {
+        margin-right: 0; }
+      footer #footerNav4 a:first-of-type {
+        margin-left: 37.53114%; }
+      footer #footerNav4 a:hover {
+        text-decoration: underline;
+        color: #5F95E3; }
+
+@media (min-width: 769px) {
+  .checkSize {
+    padding-top: 0px; } }
+
+@media (max-width: 768px) and (min-width: 481px) {
+  .checkSize {
+    padding-top: 1px; }
+  a#logo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%; }
+    a#logo:last-child {
+      margin-right: 0; }
+  header #headerNav {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    margin-left: 11.77113%; }
+    header #headerNav:last-child {
+      margin-right: 0; }
+    header #headerNav a {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 25.7907%; }
+      header #headerNav a:last-child {
+        margin-right: 0; }
+  #splashpage #homeNav span {
+    margin-left: 4.2649%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    font-weight: lighter; }
+    #splashpage #homeNav span:last-child {
+      margin-right: 0; }
+  #splashpage #homeNav a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 7.02513%;
+    margin-left: 36.72081%;
+    height: 20px; }
+    #splashpage #homeNav a:last-child {
+      margin-right: 0; }
+    #splashpage #homeNav a:nth-child(n) {
+      margin-right: 0; }
+  #splashpage #hero {
+    background-position: center relative;
+    height: 325px; }
+    #splashpage #hero span {
+      font-size: 28px; }
+      #splashpage #hero span#textTop {
+        margin-left: 46.91392%;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 53.08608%; }
+        #splashpage #hero span#textTop:last-child {
+          margin-right: 0; }
+        #splashpage #hero span#textTop:nth-child(n) {
+          margin-right: 0; }
+      #splashpage #hero span#textBottom {
+        margin-left: 55.44373%;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 44.55627%; }
+        #splashpage #hero span#textBottom:last-child {
+          margin-right: 0; }
+        #splashpage #hero span#textBottom:nth-child(n) {
+          margin-right: 0; }
+    #splashpage #hero a {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%;
+      padding-top: 1.1%; }
+      #splashpage #hero a:last-child {
+        margin-right: 0; }
+  #goalsInfo {
+    height: 860px;
+    margin-top: 25px; }
+    #goalsInfo #customerContainer {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 27.49666%;
+      height: 300px; }
+      #goalsInfo #customerContainer:last-child {
+        margin-right: 0; }
+      #goalsInfo #customerContainer:first-of-type {
+        margin-left: 11.94173%; }
+      #goalsInfo #customerContainer #customerPicture1,
+      #goalsInfo #customerContainer #customerPicture2,
+      #goalsInfo #customerContainer #customerPicture3 {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 74.41059%;
+        height: 250px; }
+        #goalsInfo #customerContainer #customerPicture1:last-child,
+        #goalsInfo #customerContainer #customerPicture2:last-child,
+        #goalsInfo #customerContainer #customerPicture3:last-child {
+          margin-right: 0; }
+  footer {
+    margin-top: 10px; }
+    footer #socialNav {
+      margin-left: 17.05961%; }
+      footer #socialNav a {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 25.7907%; }
+        footer #socialNav a:last-child {
+          margin-right: 0; }
+    footer #footerNav1 a {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      footer #footerNav1 a:last-child {
+        margin-right: 0; }
+      footer #footerNav1 a:first-of-type {
+        margin-left: 29.85432%; }
+    footer #footerNav2 a {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      footer #footerNav2 a:last-child {
+        margin-right: 0; }
+      footer #footerNav2 a:first-of-type {
+        margin-left: 29.85432%; }
+    footer #footerNav3 a {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      footer #footerNav3 a:last-child {
+        margin-right: 0; }
+      footer #footerNav3 a:first-of-type {
+        margin-left: 29.85432%; }
+    footer #footerNav4 a {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      footer #footerNav4 a:last-child {
+        margin-right: 0; }
+      footer #footerNav4 a:first-of-type {
+        margin-left: 29.85432%; } }
+
+@media (max-width: 480px) and (min-width: 280px) {
+  header {
+    height: 50px;
+    padding-top: 8px; }
+    header #logo {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      header #logo:last-child {
+        margin-right: 0; }
+      header #logo:nth-child(n) {
+        margin-right: 0; }
+      header #logo i {
+        font-size: 30px; }
+      header #logo span {
+        margin-left: 10px;
+        font-size: 30px; }
+    header #headerNav {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      margin-left: 4.2649%;
+      margin-top: 5px; }
+      header #headerNav:last-child {
+        margin-right: 0; }
+      header #headerNav:nth-child(n) {
+        margin-right: 0; }
+      header #headerNav input {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 74.41059%; }
+        header #headerNav input:last-child {
+          margin-right: 0; }
+      header #headerNav a {
+        margin-left: 80.18016%; }
+        header #headerNav a:hover {
+          border: none; }
+  #splashpage #homeNav span {
+    display: none; }
+  #splashpage #homeNav a {
+    margin-left: 82.7391%; }
+  #hero {
+    height: 200px; }
+    #hero #signupBtn {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      margin-left: 59.70863%;
+      top: 105px;
+      padding-top: 7px; }
+      #hero #signupBtn:last-child {
+        margin-right: 0; }
+      #hero #signupBtn:nth-child(n) {
+        margin-right: 0; }
+    #hero #textTop {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      margin-top: 15px;
+      margin-left: 15px;
+      font-size: 25px; }
+      #hero #textTop:last-child {
+        margin-right: 0; }
+      #hero #textTop:nth-child(n) {
+        margin-right: 0; }
+    #hero #textBottom {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      margin-top: 1px;
+      margin-left: 15px;
+      font-size: 25px; }
+      #hero #textBottom:last-child {
+        margin-right: 0; }
+      #hero #textBottom:nth-child(n) {
+        margin-right: 0; }
+  #goalsInfo {
+    height: 1100px;
+    margin-top: 25px; }
+    #goalsInfo #customerContainer {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 91.4702%;
+      margin-left: 12.79471%;
+      height: 350px;
+      margin-top: 20px; }
+      #goalsInfo #customerContainer:last-child {
+        margin-right: 0; }
+      #goalsInfo #customerContainer:first-of-type {
+        margin-left: 12.79471%;
+        margin-top: 0; }
+      #goalsInfo #customerContainer #customerPicture {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 53.08608%;
+        margin-left: 12.79471%;
+        height: 180px; }
+        #goalsInfo #customerContainer #customerPicture:last-child {
+          margin-right: 0; }
+      #goalsInfo #customerContainer #customerQuote {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 78.67549%;
+        margin-left: 0%; }
+        #goalsInfo #customerContainer #customerQuote:last-child {
+          margin-right: 0; }
+  footer #logo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    footer #logo:last-child {
+      margin-right: 0; }
+    footer #logo:nth-child(n) {
+      margin-right: 0; }
+    footer #logo i {
+      font-size: 30px; }
+    footer #logo span {
+      margin-left: 10px;
+      font-size: 30px; }
+  footer #socialNav {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+    margin-left: 4.2649%;
+    margin-top: 25px; }
+    footer #socialNav:last-child {
+      margin-right: 0; }
+    footer #socialNav:nth-child(n) {
+      margin-right: 0; }
+    footer #socialNav a {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 15.55494%; }
+      footer #socialNav a:last-child {
+        margin-right: 0; }
+      footer #socialNav a:first-of-type {
+        margin-left: 38.38412%; }
+    footer #socialNav i {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%; }
+      footer #socialNav i:last-child {
+        margin-right: 0; }
+  footer #footerNav1 a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    footer #footerNav1 a:last-child {
+      margin-right: 0; }
+    footer #footerNav1 a:first-of-type {
+      margin-left: 21.32451%; }
+  footer #footerNav2 a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    footer #footerNav2 a:last-child {
+      margin-right: 0; }
+    footer #footerNav2 a:first-of-type {
+      margin-left: 21.32451%; }
+  footer #footerNav3 a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    footer #footerNav3 a:last-child {
+      margin-right: 0; }
+    footer #footerNav3 a:first-of-type {
+      margin-left: 21.32451%; }
+  footer #footerNav4 a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    footer #footerNav4 a:last-child {
+      margin-right: 0; }
+    footer #footerNav4 a:first-of-type {
+      margin-left: 21.32451%; } }
