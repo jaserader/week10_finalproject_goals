@@ -29,12 +29,6 @@ header{
   height: 60px;
   padding: 12px 0 0 0;
   border-bottom: #F3F3F3 3px solid;
-  // background: #fff;
-  // position:fixed;
-  // top:0px;
-  // margin:auto;
-  // z-index:100000;
-
 
   #logo {
     @include span-columns(4);
@@ -75,7 +69,7 @@ header{
 
     a{
       @include span-columns(1.85);
-      @include shift(.3);
+      @include shift(8.3);
       text-decoration: none;
       color: #000;
       height: 25px;
@@ -600,6 +594,7 @@ footer{
       }
 
       a{
+        @include shift(9.4);
 
         &:hover{
           border: none;

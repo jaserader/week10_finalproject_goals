@@ -46,8 +46,6 @@ class Signinpage extends React.Component {
     return (
       <div id="signinPage">
 
-        <Link to="home">dashboard/homepage</Link>
-
         <form id="signinForm">
           <label htmlFor="username" id="usernameLabel">Username</label>
           <input type="text" id="username" />
