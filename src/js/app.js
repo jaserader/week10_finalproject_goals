@@ -38,7 +38,9 @@ ReactDOM.render((
       <Route path="home" component={Homepage} >
         <Route path="goals/:id" component={CommentsView} />
       </Route>
-      <Route path="users/:userId" component={UserView}/>
+      <Route path="users/:userId" component={UserView}>
+        <Route path="goals/:id" component={CommentsView} />
+      </Route>
       <Route path="signup" component={Signuppage} />
       <Route path="signin" component={Signinpage} />
     </Route>

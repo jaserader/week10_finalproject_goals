@@ -69,7 +69,20 @@ class Homepage extends React.Component {
   commentLink(e){
     e.preventDefault();
     Goal.viewGoal(e.target.parentElement.id);
-    let url = `home/goals/${e.target.parentElement.id}`;
+    let url;
+    if(this.state.expanded === e.target.parentElement.id.toString()){
+      url = `home`;
+      Goal.currentGoal = "";
+      this.setState({
+        expanded: Goal.currentGoal
+      });
+    }
+    else {
+      url = `home/goals/${e.target.parentElement.id}`;
+      this.setState({
+        expanded: Goal.currentGoal
+      })
+    }
     this.props.history.pushState(null, url);
   }
 
