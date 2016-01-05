@@ -3,6 +3,7 @@ import $ from "jquery";
 
 import User from "../Models/user";
 import Goal from "../Models/goal";
+import ViewedUser from "../Models/viewedUser";
 
 class CommentsView extends React.Component {
   constructor(props){
@@ -26,9 +27,16 @@ class CommentsView extends React.Component {
         $("#newComment").val(),
         e.target.parentElement.id,
         (a, response) => {
+          if(this.props.routes[1].path === "home"){
           User.goals.filter((goal) => {
             return (goal.id.toString() === response.goal_id.toString());
           })[0].comments.push(response);
+          }
+          else if(this.props.routes[1].path === "users/:userId"){
+            ViewedUser.goals.filter((goal) => {
+              return (goal.id.toString() === response.goal_id.toString());
+            })[0].comments.push(response);
+          }
           this.forceUpdate();
         }
       );
@@ -38,25 +46,32 @@ class CommentsView extends React.Component {
 
   render () {
     let comments;
+    let goalArray;
     if(this.props.id.toString() === this.props.params.id){
-      let goalArray = User.goals.filter((goal) => {
-        return (goal.id.toString() === this.props.params.id);
-      });
+      if(this.props.routes[1].path === "home"){
+        goalArray = User.goals.filter((goal) => {
+          return (goal.id.toString() === this.props.params.id);
+        });
+      }
+      else if(this.props.routes[1].path === "users/:userId"){
+        goalArray = ViewedUser.goals.filter((goal) => {
+          return (goal.id.toString() === this.props.params.id);
+        });
+      }
       let goal = goalArray[0];
       comments = goal.comments.map((comment) => {
-        console.log(comment);
-        return (<li key={comment.id}><p>{comment.body}</p></li>);
+        return (<li key={comment.id}><h6>{comment.username}</h6><p>{comment.body}</p></li>);
       });
       if(comments.length === 0){
         comments = (
-          <div class="commentContainer" id={this.props.id.toString()} key={this.props.id.toString()}>
+          <div className="commentContainer" id={this.props.id.toString()} key={this.props.id.toString()}>
           <input id="newComment"  placeholder="New Comment..." onKeyDown={this.postComment}></input>
           </div>
         );
       }
       else{
         comments.unshift((
-          <div class="commentContainer" id={this.props.id.toString()} key={this.props.id.toString() + " The first!"}>
+          <div className="commentContainer" id={this.props.id.toString()} key={this.props.id.toString() + " The first!"}>
           <input id="newComment"  placeholder="New Comment..." onKeyDown={this.postComment}></input>
           <span>Comments:</span>
           </div>
@@ -66,7 +81,7 @@ class CommentsView extends React.Component {
     else {
       comments = false;
     }
-    return (<ul id="commentSection">
+    return (<ul className="commentSection">
       {comments}
     </ul>);
   }

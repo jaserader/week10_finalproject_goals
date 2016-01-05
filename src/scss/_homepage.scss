@@ -149,7 +149,7 @@
         margin-top: 10px;
       }
 
-      #commentSection{
+      .commentSection{
         @include span-columns(12);
         display: block;
         margin-top: -40px;
@@ -192,7 +192,7 @@
           }
         }
 
-        #commentContainer{
+        .commentContainer{
           @include span-columns(12);
 
           span{
