@@ -187,12 +187,13 @@
 
           p{
             @include span-columns(11);
-            padding: 12px 0 0 5px;
+            padding: 10px 10px 10px 10px;
             border-radius: 5px;
             background: #3878D7;
             color: #fff;
             margin-top: 5px;
             margin-bottom: 0;
+            overflow: visible;
 
             &:last-of-type{
               margin-bottom: 10px;
