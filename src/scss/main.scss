@@ -29,6 +29,11 @@ header{
   height: 60px;
   padding: 12px 0 0 0;
   border-bottom: #F3F3F3 3px solid;
+  // background: #fff;
+  // position:fixed;
+  // top:0px;
+  // margin:auto;
+  // z-index:100000;
 
 
   #logo {
@@ -185,6 +190,33 @@ header{
       border-radius: 50%;
       top: 500px;
     }
+
+    #customerQuote{
+      @include span-columns(10);
+      @include omega(n);
+      height: 200px;
+      background: #fff;
+      margin-top: 20px;
+      font-weight: lighter;
+      color: gray;
+      padding: 7px;
+      text-align: center;
+
+      &:first-of-type{
+        @include shift(3);
+      }
+    }
+  }
+
+  #customerContainer{
+    @include span-columns(3);
+    @include omega(n);
+    height: 450px;
+
+    &:first-of-type{
+      @include shift(2);
+    }
+
     #customerPicture2{
       @include span-columns(9);
       @include omega(n);
@@ -195,6 +227,33 @@ header{
       border-radius: 50%;
       top: 500px;
     }
+
+    #customerQuote{
+      @include span-columns(10);
+      @include omega(n);
+      height: 200px;
+      background: #fff;
+      margin-top: 20px;
+      font-weight: lighter;
+      color: gray;
+      padding: 7px;
+      text-align: center;
+
+      &:first-of-type{
+        @include shift(3);
+      }
+    }
+  }
+  #customerContainer{
+    @include span-columns(3);
+    @include omega(n);
+    height: 450px;
+
+    &:first-of-type{
+      @include shift(2);
+    }
+
+
     #customerPicture3{
       @include span-columns(9);
       @include omega(n);
@@ -377,6 +436,8 @@ footer{
   }
 
   header{
+
+
     #headerNav{
       @include span-columns(3);
       @include shift(1.38);
@@ -431,18 +492,21 @@ footer{
   }
 
 #goalsInfo{
-  height: 460px;
+  height: 860px;
   margin-top: 25px;
 
   #customerContainer{
     @include span-columns(3.5);
+    height: 300px;
 
     &:first-of-type{
       @include shift(1.4);
     }
-    #customerPicture{
+    #customerPicture1,
+    #customerPicture2,
+    #customerPicture3 {
       @include span-columns(9);
-      height: 180px;
+      height: 250px;
     }
 
     #customerQuote{

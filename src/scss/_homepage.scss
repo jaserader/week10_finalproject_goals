@@ -3,7 +3,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #homepage{
-  height: 100%;
+  @include span-columns(12);
+  height: calc(100vh - 100px);
+  position: relative;
 
   &::after {
     display: block;
@@ -13,6 +15,7 @@
   aside{
     @include span-columns(3);
     margin-top: 10px;
+    position: absolute;
 
     #userInfo{
       @include span-columns(11.5);
@@ -103,9 +106,12 @@
     margin-top: 10px;
     height: 657px;
     background: #F3F3F3;
-    // border: #A0A0A0 2px solid;
     border-radius: 8px;
     box-shadow: 4px 4px #A9AEBD;
+    right: 25px;
+    margin-bottom: 5px;
+    position: absolute;
+    overflow: scroll;
 
     #goalsLabel{
       @include span-columns(11);
@@ -121,17 +127,15 @@
 
     }
 
-    #goal{
+    .goal{
       @include span-columns(11);
       @include shift(.5);
-      height: 100px;
       margin-top: 10px;
       border: none;
       border-radius: 5px;
       box-shadow: 4px 4px #A9AEBD;
       background: #6FA9FC;
       overflow: visible;
-      display: block;
 
       p{
         @include span-columns(10);
@@ -150,12 +154,7 @@
         display: block;
         margin-top: -40px;
         border-radius: 5px;
-        box-shadow: 4px 4px #A9AEBD;
         background: #6FA9FC;
-
-        a{
-          display: none;
-        }
 
         div{
           input{
@@ -223,7 +222,7 @@
       }
 
       #goalTxt{
-        @include span-columns(10.5);
+        @include span-columns(10);
         height: 40px;
         margin-top: 10px;
         border-radius: 5px;
@@ -233,9 +232,8 @@
 
       a{
         @include span-columns(1);
-        @include shift(10);
         @include omega(n);
-        margin-top: 15px;
+        margin-top: 18px;
 
         i{
           @include span-columns(12);
@@ -246,120 +244,6 @@
           &:hover{
             color: #F7263C;
           }
-        }
-      }
-    }
-
-    #goalExpanded{
-      @include span-columns(11);
-      @include shift(.5);
-      height: 300px;
-      margin-top: 10px;
-      border: none;
-      border-radius: 5px;
-      box-shadow: 4px 4px #A9AEBD;
-      background: #6FA9FC;
-      position: relative;
-
-      #completedBox{
-        @include span-columns(1);
-        padding: 35px 0 0 26px;
-        height: 100px;
-
-
-        button{
-          width: 25px;
-          height: 25px;
-          background: #fff;
-          border: none;
-          border-radius: 50%;
-
-          &:hover{
-            background: red;
-          }
-        }
-      }
-
-      #goalTxt{
-        @include span-columns(10.5);
-        height: 40px;
-        margin-top: 10px;
-        border-radius: 5px;
-        border: none;
-      }
-
-      .votes{
-        @include span-columns(.6);
-        margin-top: 15px;
-        color: #fff;
-        font-weight: lighter;
-        font-size: 18px;
-
-        &:first-of-type{
-          margin-right: 25px;
-        }
-      }
-
-      .voteBtn{
-        @include span-columns(.6);
-        height: 30px;
-        background: #B71C2D;
-        border: none;
-        border-radius: 5px;
-        color: #fff;
-        font-size: 20px;
-        margin-top: 10px;
-
-        &:first-of-type{
-          @include shift(1);
-          margin-right: 2px;
-        }
-
-        &:hover{
-          background: #F7263C;
-        }
-      }
-
-      a{
-        @include span-columns(1);
-        @include shift(6.7);
-        @include omega(n);
-        i{
-          @include span-columns(12);
-          color: #B71C2D;
-          height: 30px;
-          font-size: 30px;
-
-          &:hover{
-            color: #F7263C;
-          }
-        }
-      }
-
-      #commentSection{
-        @include span-columns(12);
-        border-top: #5987C9 3px solid;
-        border-radius: 5px;
-        height: 200px;
-
-        span{
-          @include span-columns(11);
-          @include shift(.5);
-          font-size: 18px;
-          margin-top: 5px;
-          color: #fff;
-          font-weight: lighter;
-        }
-
-        input{
-          @include span-columns(10.5);
-          @include shift(1);
-          height: 25px;
-          margin-top: 10px;
-          border-radius: 5px;
-          border: none;
-          padding-left: 5px;
-          font-size: 14px;
         }
       }
     }
@@ -498,32 +382,6 @@
         a{
           @include shift(9.5);
           margin-top: 20px;
-        }
-      }
-
-      #goalExpanded{
-        @include shift(.5);
-
-        #completedBox{
-          padding-left: 15px;
-        }
-
-        #goalTxt{
-          @include span-columns(9.5);
-          @include shift(1);
-        }
-
-        a{
-          @include shift(2);
-          margin-top: 20px;
-        }
-
-        #commentSection{
-
-          input{
-            @include span-columns(11);
-            @include shift(.5);
-          }
         }
       }
     }
