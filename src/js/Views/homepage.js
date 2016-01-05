@@ -12,7 +12,8 @@ class Homepage extends React.Component {
 
     this.state = {
       user: {},
-      userGoals: []
+      userGoals: [],
+      users: []
     };
 
     this.handleEnter = this.handleEnter.bind(this);
@@ -99,6 +100,13 @@ class Homepage extends React.Component {
         console.error(error);
       });
     });
+
+    $.ajax('https://goals-api.herokuapp.com/users').then(response => {
+      User.id = response.id;
+      this.setState({
+        users: response
+      });
+    });
   }
 
   render () {
@@ -123,6 +131,13 @@ class Homepage extends React.Component {
                 </div>);
       })
 
+      let users = this.state.users.map((user)=>{
+        let links = `users/${user.id}`;
+        return(
+          <li key={user.id}><Link to={links}>{`${user.first} ${user.last}`}</Link></li>
+        );
+      })
+
       return (
         <div id="homepage">
 
@@ -131,8 +146,8 @@ class Homepage extends React.Component {
                 <img src="http://www.gravatar.com/avatar/?d=identicon"  id="userAvatar"></img>
 
                <div className="nameBlock">
-                 <span>Name: {this.state.user.first} {this.state.user.last} </span>
-                 <span>Username: {this.state.user.username}</span>
+                 <span className="label">Name: {this.state.user.first} {this.state.user.last} </span>
+                 <span className="label">Username: {this.state.user.username}</span>
                </div>
 
             </section>
@@ -141,11 +156,7 @@ class Homepage extends React.Component {
             <span>Following List:</span>
 
             <ul id="followingList">
-              <Link to="home">Freddy Roberts</Link>
-              <Link to="home">Freddy Roberts</Link>
-              <Link to="home">Freddy Roberts</Link>
-              <Link to="home">Freddy Roberts</Link>
-              <Link to="home">Freddy Roberts</Link>
+            {users}
             </ul>
           </section>
         </aside>
@@ -154,16 +165,10 @@ class Homepage extends React.Component {
 
           <span id="goalsLabel">Goals</span>
 
-          <nav id="goalsNav">
-            <Link to="/">Active</Link>
-            <Link to="/">Completed</Link>
-            <Link to="/">Following Activity</Link>
-          </nav>
-
           <div id="goal">
             <div id="completedBox"><button id="completed"></button></div>
 
-            <input id="goalTxt" onKeyDown={this.handlePostGoal} ></input>
+            <input id="goalTxt" placeholder="New Goal..." onKeyDown={this.handlePostGoal} ></input>
 
             <Link to="/"><i className="fa fa-angle-down"></i></Link>
 

@@ -44,13 +44,17 @@
         font-size: 20px;
         font-weight: lighter;
         color: #fff;
+
+        .label{
+          @include span-columns(10);
+        }
       }
     }
 
     #friendsList{
       @include span-columns(11.5);
       @include shift(.85);
-      height: 400px;
+      height: 435px;
       background: #F3F3F3;
       margin-top: 8px;
       border-radius: 5px;
@@ -72,17 +76,22 @@
         @include span-columns(12);
         margin: 0;
 
-        a{
+        li{
           @include span-columns(10);
-          @include shift(1);
+          @include shift(.5);
+          list-style: none;
+
+        a{
+          @include span-columns(12);
           text-decoration: none;
           color: gray;
           font-weight: lighter;
           font-size: 18px;
-          margin-top: 5px;
+          margin-top: 7px;
 
           &:hover{
             color: red;
+            }
           }
         }
       }
@@ -112,89 +121,80 @@
 
     }
 
-    #goalsNav{
-      @include span-columns(12);
-      height: 30px;
-      padding-top: 12px;
-
-      a{
-        @include span-columns(1.6);
-        border-right: gray 1px solid;
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: lighter;
-        color: gray;
-
-        &:first-of-type{
-          @include span-columns(1.15);
-          @include shift(4);
-        }
-
-        &:last-of-type{
-          @include span-columns(3);
-          border: none;
-        }
-
-        &:hover{
-          color: red;
-        }
-      }
-
-    }
-
     #goal{
       @include span-columns(11);
       @include shift(.5);
-      height: 150px;
+      height: 100px;
       margin-top: 10px;
       border: none;
       border-radius: 5px;
       box-shadow: 4px 4px #A9AEBD;
       background: #6FA9FC;
-      position: relative;
+      overflow: visible;
+      display: block;
 
       p{
         @include span-columns(10);
-        padding: 5px 0 0 5px;
+        padding: 12px 0 0 5px;
         border-radius: 5px;
+        font-weight: bold;
+        color: #fff;
         background: #3878D7;
+        margin-bottom: 0;
+        height: 40px;
+        margin-top: 10px;
       }
 
       #commentSection{
         @include span-columns(12);
-        margin-top: 0;
-        height: 150px;
+        display: block;
+        margin-top: -40px;
         border-radius: 5px;
         box-shadow: 4px 4px #A9AEBD;
         background: #6FA9FC;
 
-
-        li{
-          @include span-columns(11);
-          @include shift(1);
-          list-style: none;
-
-          p{
-            @include span-columns(11);
-            padding: 5px 0 0 5px;
-            border-radius: 5px;
-            background: #3878D7;
-            color: #fff;
-            margin-top: 5px;
-            margin-bottom: 0;
-          }
+        a{
+          display: none;
         }
 
-        #commentContainer{
-          @include span-columns(12);
-
+        div{
           input{
             @include span-columns(10);
             @include shift(1);
             border-radius: 5px;
             border: none;
-            height: 25px;
+            height: 30px;
+            margin-bottom: 5px;
           }
+
+          span{
+            @include span-columns(10);
+          }
+        }
+
+
+        li{
+          @include span-columns(11);
+          @include shift(.9);
+          list-style: none;
+
+          p{
+            @include span-columns(11);
+            padding: 12px 0 0 5px;
+            border-radius: 5px;
+            background: #3878D7;
+            color: #fff;
+            margin-top: 5px;
+            margin-bottom: 0;
+
+            &:last-of-type{
+              margin-bottom: 10px;
+            }
+          }
+        }
+
+        #commentContainer{
+          @include span-columns(12);
 
           span{
             @include shift(.5);
@@ -208,7 +208,6 @@
         @include span-columns(1);
         padding: 35px 0 0 26px;
         height: 100px;
-
 
         button{
           width: 25px;
@@ -229,44 +228,14 @@
         margin-top: 10px;
         border-radius: 5px;
         border: none;
-      }
-
-      .votes{
-        @include span-columns(.6);
-        margin-top: 15px;
-        color: #fff;
-        font-weight: lighter;
-        font-size: 18px;
-
-        &:first-of-type{
-          margin-right: 25px;
-        }
-      }
-
-      .voteBtn{
-        @include span-columns(.6);
-        height: 30px;
-        background: #B71C2D;
-        border: none;
-        border-radius: 5px;
-        color: #fff;
-        font-size: 20px;
-        margin-top: 8px;
-
-        &:first-of-type{
-          @include shift(1);
-          margin-right: 2px;
-        }
-
-        &:hover{
-          background: #F7263C;
-        }
+        padding-left: 5px;
       }
 
       a{
         @include span-columns(1);
-        @include shift(6.7);
+        @include shift(10);
         @include omega(n);
+        margin-top: 15px;
 
         i{
           @include span-columns(12);
@@ -440,17 +409,6 @@
       @include span-columns(11.5);
       @include shift(.3);
 
-      #goalsNav{
-        a{
-          @include span-columns(2.1)
-
-          &:first-of-type{
-            @include span-columns(1.4);
-            @include shift(3);
-          }
-        }
-      }
-
       #goal{
         @include shift(.5);
 
@@ -458,48 +416,12 @@
           padding-left: 15px;
         }
 
-        .votes{
-          @include span-columns(.8);
-        }
-
-        .voteBtn{
-          @include span-columns(.8);
-        }
-
         a{
-          @include shift(4.7);
+          @include shift(9.8);
           margin-top: 20px;
         }
       }
 
-      #goalExpanded{
-        @include shift(.5);
-
-        #completedBox{
-          padding-left: 15px;
-        }
-
-        .votes{
-          @include span-columns(.8);
-        }
-
-        .voteBtn{
-          @include span-columns(.8);
-        }
-
-        a{
-          @include shift(4.7);
-          margin-top: 20px;
-        }
-
-        #commentSection{
-
-          input{
-            @include span-columns(11);
-            @include shift(.5);
-          }
-        }
-      }
     }
   }
 
@@ -561,22 +483,6 @@
       @include shift(.3);
       height: 680px;
 
-      #goalsNav{
-        a{
-          @include span-columns(3.3)
-
-          &:first-of-type{
-            @include span-columns(2.1);
-            @include shift(1);
-          }
-
-          &:last-of-type{
-            @include span-columns(5);
-            border: none;
-          }
-        }
-      }
-
       #goal{
         @include shift(.5);
 
@@ -589,16 +495,8 @@
           @include shift(1);
         }
 
-        .votes{
-          @include span-columns(1.2);
-        }
-
-        .voteBtn{
-          @include span-columns(1.2);
-        }
-
         a{
-          @include shift(2);
+          @include shift(9.5);
           margin-top: 20px;
         }
       }
@@ -613,14 +511,6 @@
         #goalTxt{
           @include span-columns(9.5);
           @include shift(1);
-        }
-
-        .votes{
-          @include span-columns(1.2);
-        }
-
-        .voteBtn{
-          @include span-columns(1.2);
         }
 
         a{

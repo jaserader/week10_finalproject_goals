@@ -11,6 +11,7 @@ import Footer from "./Views/footer";
 import Notfoundpage from "./Views/notfoundpage";
 import CommentsView from "./Views/commentsview";
 import Goal from "./Models/goal";
+import UserView from "./Views/userView";
 
 class App extends React.Component{
   constructor(props){
@@ -37,6 +38,7 @@ ReactDOM.render((
       <Route path="home" component={Homepage} >
         <Route path="goals/:id" component={CommentsView} />
       </Route>
+      <Route path="users/:userId" component={UserView}/>
       <Route path="signup" component={Signuppage} />
       <Route path="signin" component={Signinpage} />
     </Route>

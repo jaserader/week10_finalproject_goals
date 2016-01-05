@@ -37,17 +37,17 @@ class Splashpage extends React.Component {
 
         <section id="goalsInfo">
           <div id="customerContainer">
-            <div id="customerPicture"></div>
+            <div id="customerPicture1"></div>
             <div id="customerQuote">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
           </div>
 
           <div id="customerContainer">
-            <div id="customerPicture"></div>
+            <div id="customerPicture2"></div>
             <div id="customerQuote">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
           </div>
 
           <div id="customerContainer">
-            <div id="customerPicture"></div>
+            <div id="customerPicture3"></div>
             <div id="customerQuote">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
           </div>
 

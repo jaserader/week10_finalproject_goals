@@ -175,12 +175,33 @@ header{
       @include shift(2);
     }
 
-    #customerPicture{
+    #customerPicture1{
       @include span-columns(9);
       @include omega(n);
       margin-top: 5%;
       height: 250px;
-      background: gray url("../../assets/man.jpg") no-repeat -292px -73px;
+      background: gray url("../../assets/tim.jpg") no-repeat  0px 0px;
+      background-size: 250px 250px;
+      border-radius: 50%;
+      top: 500px;
+    }
+    #customerPicture2{
+      @include span-columns(9);
+      @include omega(n);
+      margin-top: 5%;
+      height: 250px;
+      background: gray url("../../assets/lee.jpg") no-repeat  0px 0px;
+      background-size: 250px 250px;
+      border-radius: 50%;
+      top: 500px;
+    }
+    #customerPicture3{
+      @include span-columns(9);
+      @include omega(n);
+      margin-top: 5%;
+      height: 250px;
+      background: gray url("../../assets/jase.jpg") no-repeat 0px 0px;
+      background-size: 250px 250px;
       border-radius: 50%;
       top: 500px;
     }

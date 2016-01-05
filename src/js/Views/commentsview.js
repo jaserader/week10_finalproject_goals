@@ -50,14 +50,14 @@ class CommentsView extends React.Component {
       if(comments.length === 0){
         comments = (
           <div class="commentContainer" id={this.props.id.toString()} key={this.props.id.toString()}>
-          <input id="newComment"  placeholder="New Comment...." onKeyDown={this.postComment}></input>
+          <input id="newComment"  placeholder="New Comment..." onKeyDown={this.postComment}></input>
           </div>
         );
       }
       else{
         comments.unshift((
           <div class="commentContainer" id={this.props.id.toString()} key={this.props.id.toString() + " The first!"}>
-          <input id="newComment"  placeholder="New Comment...." onKeyDown={this.postComment}></input>
+          <input id="newComment"  placeholder="New Comment..." onKeyDown={this.postComment}></input>
           <span>Comments:</span>
           </div>
         ));
