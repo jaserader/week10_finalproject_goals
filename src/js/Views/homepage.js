@@ -115,7 +115,6 @@ class Homepage extends React.Component {
     });
 
     $.ajax('https://goals-api.herokuapp.com/users').then(response => {
-      User.id = response.id;
       this.setState({
         users: response
       });
@@ -123,7 +122,6 @@ class Homepage extends React.Component {
   }
 
   render () {
-
       let goals = this.state.userGoals.map(goal => {
         let comments = goal.comments.map((comment) => {
           return (<p key={goal.id}>{comment.username}:{comment.body}</p>);
@@ -142,6 +140,9 @@ class Homepage extends React.Component {
 
       let users = this.state.users.map((user)=>{
         let links = `users/${user.id}`;
+        if(User.id === user.id){
+          return;
+        }
         return(
           <li key={user.id}><Link to={links}>{`${user.first} ${user.last}`}</Link></li>
         );
@@ -162,7 +163,7 @@ class Homepage extends React.Component {
             </section>
 
           <section id="friendsList">
-            <span>Following List:</span>
+            <span>Users List:</span>
 
             <ul id="followingList">
             {users}
@@ -178,8 +179,6 @@ class Homepage extends React.Component {
             <div id="completedBox"><button id="completed"></button></div>
 
             <input id="goalTxt" placeholder="New Goal..." onKeyDown={this.handlePostGoal} ></input>
-
-            <Link to="/"><i className="fa fa-angle-down"></i></Link>
 
           </div>
 
