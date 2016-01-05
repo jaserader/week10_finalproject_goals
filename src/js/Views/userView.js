@@ -168,16 +168,12 @@ class UserView extends React.Component {
             return React.cloneElement(child, {id: goal.id});
           });
         let link = `users/${this.state.user.id}/goals/${goal.id}`;
-        return (  <div id="goal" key={goal.id} >
-                  <div id="completedBox"><button id="completed"></button></div>
-
-                  <p>{goal.body}</p>
-
-                  {children}
-
-                  <Link to={link} onClick={this.commentLink} id={goal.id} key={goal.id}><i className="fa fa-angle-down"></i></Link>
-
-                </div>);
+        return (  <div className="goal" key={goal.id} >
+                    <div id="completedBox"><button id="completed"></button></div>
+                    <p>{goal.body}</p>
+                    <Link to={link} onClick={this.commentLink} id={goal.id} key={goal.id}><i className="fa fa-angle-down"></i></Link>
+                    {children}
+                  </div>);
       })
 
       let users = this.state.users.map((user)=>{

@@ -71,14 +71,14 @@ class Homepage extends React.Component {
     Goal.viewGoal(e.target.parentElement.id);
     let url;
     if(this.state.expanded === e.target.parentElement.id.toString()){
-      url = `users/${this.state.user.id}`;
+      url = `home`;
       Goal.currentGoal = "";
       this.setState({
         expanded: Goal.currentGoal
       });
     }
     else {
-      url = `users/${this.state.user.id}/goals/${e.target.parentElement.id}`;
+      url = `home/goals/${e.target.parentElement.id}`;
       this.setState({
         expanded: Goal.currentGoal
       })
