@@ -69,7 +69,7 @@ header{
 
     a{
       @include span-columns(1.85);
-      @include shift(7);
+      @include shift(8.3);
       text-decoration: none;
       color: #000;
       height: 25px;
@@ -594,6 +594,7 @@ footer{
       }
 
       a{
+        @include shift(9.4);
 
         &:hover{
           border: none;
