@@ -37,7 +37,6 @@ class Header extends React.Component{
       <header>
         { home }
         <nav id="headerNav">
-          <input type="text" placeholder="search"></input>
         { logout }
         </nav>
       </header>

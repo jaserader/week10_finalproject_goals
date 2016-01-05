@@ -21,7 +21,6 @@
       @include span-columns(11.5);
       @include shift(.85);
       background: #F78883;
-      // border: #A0A0A0 2px solid;
       border-radius: 5px;
       box-shadow: 4px 4px #A9AEBD;
       margin-bottom: 5px;
@@ -111,6 +110,7 @@
     box-shadow: 4px 4px #A9AEBD;
     right: 25px;
     margin-bottom: 5px;
+    padding-bottom: 10px;
     position: absolute;
     overflow: scroll;
 
@@ -140,13 +140,12 @@
 
       p{
         @include span-columns(10);
-        padding: 12px 0 0 5px;
+        padding: 10px 0 10px 10px;
         border-radius: 5px;
         font-weight: bold;
         color: #fff;
         background: #3878D7;
         margin-bottom: 0;
-        height: 40px;
         margin-top: 10px;
       }
 
@@ -177,6 +176,14 @@
           @include span-columns(11);
           @include shift(.9);
           list-style: none;
+
+          h6{
+            font-size: 14px;
+            font-weight: lighter;
+            color: black;
+            margin-top: 1px;
+            margin-bottom: 1px;
+          }
 
           p{
             @include span-columns(11);
@@ -375,16 +382,45 @@
       top: 215px;
       right: 7px;
 
-      #goal{
+      .goal{
         @include shift(.5);
 
+        .commentSection{
+          @include span-columns(12);
+          display: block;
+          margin-top: -40px;
+          border-radius: 5px;
+          background: #6FA9FC;
+
+
+          li{
+            p{
+              padding: 10px 10px 10px 10px;
+              font-weight: lighter;
+              overflow: visible;
+            }
+          }
+
+          .commentContainer{
+          }
+        }
+
         #completedBox{
+          @include span-columns(2);
+          @include omega(n);
           padding-left: 15px;
+
+        }
+
+        p{
+          font-weight: lighter;
+          overflow: visible;
         }
 
         #goalTxt{
-          @include span-columns(9.5);
-          @include shift(1);
+          @include span-columns(9.8);
+          @include shift(0);
+          font-weight: lighter;
         }
 
         a{

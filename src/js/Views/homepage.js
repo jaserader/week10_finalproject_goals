@@ -179,8 +179,6 @@ class Homepage extends React.Component {
 
             <input id="goalTxt" placeholder="New Goal..." onKeyDown={this.handlePostGoal} ></input>
 
-            <Link to="/"><i className="fa fa-angle-down"></i></Link>
-
           </div>
 
           {goals}
