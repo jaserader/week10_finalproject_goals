@@ -820,6 +820,8 @@ th {
         height: 100px; }
         #homepage #goalsListBox .goal #completedBox:last-child {
           margin-right: 0; }
+        #homepage #goalsListBox .goal #completedBox .completed {
+          background: red; }
         #homepage #goalsListBox .goal #completedBox button {
           width: 25px;
           height: 25px;
@@ -1183,7 +1185,7 @@ header {
   display: block;
   margin-right: 2.35765%;
   width: 100%;
-  background: gray url("../../assets/goalHero.jpg") no-repeat fixed center;
+  background: gray url("../img/goalHero.jpg") no-repeat fixed center;
   height: 450px;
   position: relative;
   color: #fff;
@@ -1262,7 +1264,7 @@ header {
       width: 74.41059%;
       margin-top: 5%;
       height: 250px;
-      background: gray url("../../assets/tim.jpg") no-repeat 0px 0px;
+      background: gray url("../img/tim.jpg") no-repeat 0px 0px;
       background-size: 250px 250px;
       border-radius: 50%;
       top: 500px; }
@@ -1307,7 +1309,7 @@ header {
       width: 74.41059%;
       margin-top: 5%;
       height: 250px;
-      background: gray url("../../assets/lee.jpg") no-repeat 0px 0px;
+      background: gray url("../img/lee.jpg") no-repeat 0px 0px;
       background-size: 250px 250px;
       border-radius: 50%;
       top: 500px; }
@@ -1352,7 +1354,7 @@ header {
       width: 74.41059%;
       margin-top: 5%;
       height: 250px;
-      background: gray url("../../assets/jase.jpg") no-repeat 0px 0px;
+      background: gray url("../img/jase.jpg") no-repeat 0px 0px;
       background-size: 250px 250px;
       border-radius: 50%;
       top: 500px; }
@@ -1779,7 +1781,7 @@ footer {
       #hero #textBottom:nth-child(n) {
         margin-right: 0; }
   #goalsInfo {
-    height: 1100px;
+    height: 1380px;
     margin-top: 25px; }
     #goalsInfo #customerContainer {
       float: left;
@@ -1787,7 +1789,7 @@ footer {
       margin-right: 2.35765%;
       width: 91.4702%;
       margin-left: 12.79471%;
-      height: 350px;
+      height: 435px;
       margin-top: 20px; }
       #goalsInfo #customerContainer:last-child {
         margin-right: 0; }
