@@ -1626,26 +1626,26 @@ footer {
       #splashpage #hero a:last-child {
         margin-right: 0; }
   #goalsInfo {
-    height: 860px;
+    height: 500px;
     margin-top: 25px; }
     #goalsInfo #customerContainer {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 27.49666%;
+      width: 31.76157%;
       height: 300px; }
       #goalsInfo #customerContainer:last-child {
         margin-right: 0; }
       #goalsInfo #customerContainer:first-of-type {
-        margin-left: 11.94173%; }
+        margin-left: 4.2649%; }
       #goalsInfo #customerContainer #customerPicture1,
       #goalsInfo #customerContainer #customerPicture2,
       #goalsInfo #customerContainer #customerPicture3 {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 74.41059%;
-        height: 250px; }
+        width: 82.94039%;
+        height: 200px; }
         #goalsInfo #customerContainer #customerPicture1:last-child,
         #goalsInfo #customerContainer #customerPicture2:last-child,
         #goalsInfo #customerContainer #customerPicture3:last-child {
