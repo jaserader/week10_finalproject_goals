@@ -123,15 +123,27 @@ class Homepage extends React.Component {
 
   render () {
       let goals = this.state.userGoals.map(goal => {
+
         let comments = goal.comments.map((comment) => {
           return (<p key={goal.id}>{comment.username}:{comment.body}</p>);
         });
+
           let children = React.Children.map(this.props.children, (child) => {
             return React.cloneElement(child, {id: goal.id});
           });
+
+        let complete;
+
+          if (goal.completed === true){
+            complete = (<button className="completed" id={goal.completed} onClick={this.handleCheckbox} ></button>)}
+          else {
+              complete = (<button id={goal.completed} onClick={this.handleCheckbox} ></button>)
+            };
+
         let link = `home/goals/${goal.id}`;
+
         return (  <div className="goal" key={goal.id} >
-                    <div id="completedBox"><button id="completed"></button></div>
+                    <div id="completedBox">{complete}</div>
                     <p>{goal.body}</p>
                     <Link to={link} onClick={this.commentLink} id={goal.id} key={goal.id}><i className="fa fa-angle-down"></i></Link>
                     {children}
@@ -140,9 +152,11 @@ class Homepage extends React.Component {
 
       let users = this.state.users.map((user)=>{
         let links = `users/${user.id}`;
+
         if(User.id === user.id){
-          return;
-        }
+            return;
+          }
+
         return(
           <li key={user.id}><Link to={links}>{`${user.first} ${user.last}`}</Link></li>
         );
@@ -153,7 +167,7 @@ class Homepage extends React.Component {
 
           <aside>
             <section id="userInfo">
-                <img src="http://www.gravatar.com/avatar/?d=identicon"  id="userAvatar"></img>
+                <img src="http://lorempixel.com/150/150/cats"  id="userAvatar"></img>
 
                <div className="nameBlock">
                  <span className="label">Name: {this.state.user.first} {this.state.user.last} </span>
@@ -176,7 +190,7 @@ class Homepage extends React.Component {
           <span id="goalsLabel">Goals</span>
 
           <div className="goal">
-            <div id="completedBox"><button id="completed"></button></div>
+            <div id="completedBox"><button id="completed" ></button></div>
 
             <input id="goalTxt" placeholder="New Goal..." onKeyDown={this.handlePostGoal} ></input>
 

@@ -217,6 +217,10 @@
         padding: 35px 0 0 26px;
         height: 100px;
 
+        .completed{
+          background: red;
+        }
+
         button{
           width: 25px;
           height: 25px;
