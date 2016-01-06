@@ -270,6 +270,7 @@ header{
       padding: 7px;
       text-align: center;
 
+
       &:first-of-type{
         @include shift(3);
       }
@@ -646,13 +647,13 @@ footer{
 }
 
 #goalsInfo{
-  height: 1100px;
+  height: 1380px;
   margin-top: 25px;
 
   #customerContainer{
     @include span-columns(11);
     @include shift(1.5);
-    height: 350px;
+    height: 435px;
     margin-top: 20px;
 
     &:first-of-type{
