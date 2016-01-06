@@ -116,7 +116,7 @@ header{
 
   #hero{
     @include span-columns(12);
-    background: gray url("../../assets/goalHero.jpg") no-repeat fixed center;
+    background: gray url("../img/goalHero.jpg") no-repeat fixed center;
     height: 450px;
     position: relative;
     color: #fff;
@@ -179,7 +179,7 @@ header{
       @include omega(n);
       margin-top: 5%;
       height: 250px;
-      background: gray url("../../assets/tim.jpg") no-repeat  0px 0px;
+      background: gray url("../img/tim.jpg") no-repeat  0px 0px;
       background-size: 250px 250px;
       border-radius: 50%;
       top: 500px;
@@ -216,7 +216,7 @@ header{
       @include omega(n);
       margin-top: 5%;
       height: 250px;
-      background: gray url("../../assets/lee.jpg") no-repeat  0px 0px;
+      background: gray url("../img/lee.jpg") no-repeat  0px 0px;
       background-size: 250px 250px;
       border-radius: 50%;
       top: 500px;
@@ -253,7 +253,7 @@ header{
       @include omega(n);
       margin-top: 5%;
       height: 250px;
-      background: gray url("../../assets/jase.jpg") no-repeat 0px 0px;
+      background: gray url("../img/jase.jpg") no-repeat 0px 0px;
       background-size: 250px 250px;
       border-radius: 50%;
       top: 500px;
