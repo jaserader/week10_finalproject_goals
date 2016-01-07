@@ -38,6 +38,7 @@ class CommentsView extends React.Component {
             })[0].comments.push(response);
           }
           this.forceUpdate();
+          $("#newComment").val("");
         }
       );
     }

@@ -54,6 +54,8 @@ class Homepage extends React.Component {
           alert("Post Failed!")
           return error;
         }
+
+        $('#goalTxt').val("");
       }
 
       Goal.post(
