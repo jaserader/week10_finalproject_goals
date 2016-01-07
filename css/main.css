@@ -726,6 +726,8 @@ th {
       overflow: visible; }
       #homepage #goalsListBox .goal:last-child {
         margin-right: 0; }
+      #homepage #goalsListBox .goal #goalTxt:first-of-type {
+        margin-top: 28px; }
       #homepage #goalsListBox .goal p {
         float: left;
         display: block;
@@ -894,15 +896,16 @@ th {
           #homepage aside #userInfo #userAvatar:last-child {
             margin-right: 0; }
           #homepage aside #userInfo #userAvatar:first-of-type {
-            margin-left: 12.79471%; }
+            margin-left: 6.82384%; }
         #homepage aside #userInfo .nameBlock {
           float: left;
           display: block;
           margin-right: 2.35765%;
-          width: 40.29137%;
+          width: 48.82117%;
           margin-left: 2.55894%;
-          margin-top: 40px;
-          font-size: 18px; }
+          margin-top: 70px;
+          font-size: 18px;
+          font-weight: lighter; }
           #homepage aside #userInfo .nameBlock:last-child {
             margin-right: 0; }
       #homepage aside #friendsList {
@@ -927,13 +930,22 @@ th {
       right: 13px; }
       #homepage #goalsListBox:last-child {
         margin-right: 0; }
-      #homepage #goalsListBox #goal {
+      #homepage #goalsListBox .goal {
         margin-left: 4.2649%; }
-        #homepage #goalsListBox #goal #completedBox {
+        #homepage #goalsListBox .goal #goalTxt {
+          margin-left: 2.55894%; }
+        #homepage #goalsListBox .goal #completedBox {
           padding-left: 15px; }
-        #homepage #goalsListBox #goal a {
-          margin-left: 83.59208%;
-          margin-top: 20px; } }
+        #homepage #goalsListBox .goal a {
+          margin-top: 16px; }
+        #homepage #goalsListBox .goal p {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 78.67549%;
+          margin-left: 2.55894%; }
+          #homepage #goalsListBox .goal p:last-child {
+            margin-right: 0; } }
 
 @media (max-width: 480px) and (min-width: 300px) {
   #homepage {
