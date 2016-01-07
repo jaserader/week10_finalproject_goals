@@ -138,6 +138,12 @@
       background: #6FA9FC;
       overflow: visible;
 
+      #goalTxt{
+        &:first-of-type{
+          margin-top: 28px;
+        }
+      }
+
       p{
         @include span-columns(10);
         padding: 10px 0 10px 10px;
@@ -241,6 +247,7 @@
         border-radius: 5px;
         border: none;
         padding-left: 5px;
+
       }
 
       a{
@@ -283,15 +290,16 @@
           margin-top: 17px;
 
           &:first-of-type{
-            @include shift(1.5);
+            @include shift(.8);
           }
         }
 
         .nameBlock{
-          @include span-columns(5);
+          @include span-columns(6);
           @include shift(.3);
-          margin-top: 40px;
+          margin-top: 70px;
           font-size: 18px;
+          font-weight: lighter;
         }
       }
 
@@ -310,16 +318,25 @@
       top: 205px;
       right: 13px;
 
-      #goal{
+      .goal{
         @include shift(.5);
+
+        #goalTxt{
+          @include shift(.3);
+
+        }
 
         #completedBox{
           padding-left: 15px;
         }
 
         a{
-          @include shift(9.8);
-          margin-top: 20px;
+          margin-top: 16px;
+        }
+
+        p{
+          @include span-columns(9.5);
+          @include shift(.3);
         }
       }
 

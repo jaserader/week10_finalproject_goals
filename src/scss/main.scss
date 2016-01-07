@@ -487,21 +487,21 @@ footer{
   }
 
 #goalsInfo{
-  height: 860px;
+  height: 500px;
   margin-top: 25px;
 
   #customerContainer{
-    @include span-columns(3.5);
+    @include span-columns(4);
     height: 300px;
 
     &:first-of-type{
-      @include shift(1.4);
+      @include shift(.5);
     }
     #customerPicture1,
     #customerPicture2,
     #customerPicture3 {
-      @include span-columns(9);
-      height: 250px;
+      @include span-columns(10);
+      height: 200px;
     }
 
     #customerQuote{
