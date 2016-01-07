@@ -27,6 +27,39 @@ class Goal{
     });
   }
 
+  putComplete(idNumber, className) {
+    let options;
+    if (className === "incomplete") {
+      options = {
+        url: `https://goals-api.herokuapp.com/goals/${idNumber}`,
+        method: 'PUT',
+        data: {
+          "goal":
+          {
+            "completed": true
+          }
+        }
+      }
+    } else {
+      options = {
+        url: `https://goals-api.herokuapp.com/goals/${idNumber}`,
+        method: 'PUT',
+        data: {
+          "goal":
+          {
+            "completed": false
+          }
+        }
+     }
+    }
+
+    $.ajax(options).then(response => {
+      console.error("yay", response)
+    }).fail(error => {
+      console.error("nay", response)
+    });
+  }
+
   postComment(data, id, done){
     let url = `https://goals-api.herokuapp.com/goals/${id}/comments`;
 

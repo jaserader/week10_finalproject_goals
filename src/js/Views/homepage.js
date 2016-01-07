@@ -19,6 +19,7 @@ class Homepage extends React.Component {
     this.handleEnter = this.handleEnter.bind(this);
     this.handlePostGoal = this.handlePostGoal.bind(this);
     this.commentLink = this.commentLink.bind(this);
+    this.handleCheckbox = this.handleCheckbox.bind(this);
   }
 
   handleEnter(e){
@@ -27,6 +28,21 @@ class Homepage extends React.Component {
     }
 
     return false;
+  }
+
+  handleCheckbox(e){
+    Goal.putComplete(
+      e.target.id,
+      e.target.className
+    );
+
+    let updated = this.state.userGoals.map(goal => {
+      if(goal.id == e.target.id) {
+        goal.completed = !goal.completed; // just freaking invert it.
+      }
+      return goal;
+    });
+    this.setState({userGoals: updated});
   }
 
   handlePostGoal(e){
@@ -137,9 +153,9 @@ class Homepage extends React.Component {
         let complete;
 
           if (goal.completed === true){
-            complete = (<button className="completed" id={goal.completed} onClick={this.handleCheckbox} ></button>)}
+            complete = (<button className="completed" id={goal.id} onClick={this.handleCheckbox} ></button>)}
           else {
-              complete = (<button id={goal.completed} onClick={this.handleCheckbox} ></button>)
+            complete = (<button className="incomplete" id={goal.id} onClick={this.handleCheckbox} ></button>)
             };
 
         let link = `home/goals/${goal.id}`;
